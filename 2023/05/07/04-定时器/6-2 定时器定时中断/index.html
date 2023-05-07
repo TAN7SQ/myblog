@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/05/03/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2023/05/07/04-定时器/6-2 定时器定时中断/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - TAN's Blog</title>
-  <meta name="keywords" content="关于博客,null">
+  <title>6-2 定时器定时中断 - TAN's Blog</title>
+  <meta name="keywords" content="STM32,null">
   <meta desc name="description" content="this is TAN7 blog - TAN7 - TAN's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/05/03/hello-world/index.html">
+<meta property="og:title" content="6-2 定时器定时中断">
+<meta property="og:url" content="http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="[[6-1_TIM定时中断]]定时器中断新建的Timer.c  &amp;  Timer.h文件在System文件夹下  RCC开启时钟 选择时基单元的时钟源，对于定时中断，我们就选择内部时钟源 配置时基单元，包括预分频器、自动重装器、计数模式 配置输出中断控制，阴虚更新中断到NVIC 配置NVIC，在NVIC中打开定时器中断的通道，并分配一个优先级 运行控制 整个模块配置完成后，我们还需要使能一">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-03T07:18:32.845Z">
-<meta property="article:modified_time" content="2023-05-06T10:49:57.351Z">
+<meta property="article:published_time" content="2023-05-07T14:47:18.636Z">
+<meta property="article:modified_time" content="2023-05-07T14:45:29.185Z">
 <meta property="article:author" content="TAN7">
-<meta property="article:tag" content="关于博客">
+<meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2322,7 +2322,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-2 定时器定时中断/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2343,7 +2343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        6-2 定时器定时中断
       </h1>
       <div class='new-meta-box'>
         
@@ -2362,10 +2362,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url"><span itemprop="name">代码</span></a>
+        <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
       </span>
     
   </div>
@@ -2374,10 +2374,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-03T15:18:32+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 3, 2023</p>
+    <p>发布于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2400,20 +2400,45 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h1 id="6-1-TIM定时中断"><a href="#6-1-TIM定时中断" class="headerlink" title="[[6-1_TIM定时中断]]"></a>[[6-1_TIM定时中断]]</h1><h1 id="定时器中断"><a href="#定时器中断" class="headerlink" title="定时器中断"></a>定时器中断</h1><p>新建的<code>Timer.c  &amp;  Timer.h</code>文件在<code>System</code>文件夹下<br><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503101328.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503101328.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ol>
+<li>RCC开启时钟</li>
+<li>选择时基单元的时钟源，对于定时中断，我们就选择内部时钟源</li>
+<li>配置时基单元，包括预分频器、自动重装器、计数模式</li>
+<li>配置输出中断控制，阴虚更新中断到NVIC</li>
+<li>配置NVIC，在NVIC中打开定时器中断的通道，并分配一个优先级</li>
+<li>运行控制</li>
+<li>整个模块配置完成后，我们还需要使能一下计数器，不然计数器不会运行</li>
+<li>定时器中断函数，这样这个中断函数每隔一段事件就能自动执行一次了</li>
+</ol>
+<h1 id="库函数解析"><a href="#库函数解析" class="headerlink" title="库函数解析"></a>库函数解析</h1><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503103829.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503103829.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><code>TIM_TimeBaseInit</code>时基单元初始化，用来配置时基单元的<br><code>TIM_Cmd</code>用于使能计数器，对应时基单元的运行控制<br><code>TIM_ITConfig</code>用于使能中断输出信号 ，对应中断输出控制(config v.配置)</p>
+<ul>
+<li>像这样的ITConfig后面还会经常遇到，就是&#x3D;&#x3D;使能外设的中断输出&#x3D;&#x3D;</li>
+</ul>
+<p><code>TIM_InternalClockConfig</code>选择内部时钟，参数只有一个，选择之后连线就是这样<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503105402.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503105402.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><code>TIM_ITRxExternalClockConfig</code>选择ITRx其他定时器时钟，第一个参数<code>TIMx</code>选择要配置的定时器，第二个参数<code>InputTrigggerSource</code>选择要接入哪个其他定时器，调用后连接变成这样<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503105547.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503105547.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><code>TIM_TIxExternalClockConfig</code>选择TIx捕获通道的时钟，第二个参数TIxExternalCLKSource选择TIx具体的某个引脚，ICPolarity和ICFilter，输入的极性和滤波器，调用后这样连接<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503105912.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230503105912.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><code>TIM_ETRClockMode1Config</code>选择ETR通过外部时钟模式1输入的时钟，参数<code>ExtTRGPrescaler</code>外部触发预分频器(scalar n.标量)<br><code>TIM_ETRConfig</code>单独用来配置ETR引脚的预分频器、极性、滤波器等这些参数</p>
+<blockquote>
+<ol>
+<li>时钟源的选择用这六个函数<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230505161434.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230505161434.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></li>
+<li>时基单元，用TimeBaseInit函数</li>
+<li>中断输出控制，用ITConfig函数</li>
+<li>NVIC，用NVIC_Init函数</li>
+<li>运行控制，用TIM_Cmd函数</li>
+</ol>
+</blockquote>
+<ul>
+<li><code>TIM_PrescalarConfig</code>，用于单独写预分频值</li>
+<li><code>TIM_CounterModeConfig</code>，用于改变计数器的计数模式</li>
+<li><code>TIM_ARRPreloadConfig</code>，自动重装器预装功能配置</li>
+<li><code>TIM_SetCounter</code>，给计数器写入一个值</li>
+<li><code>TIM_SetAutoreload</code>，给自动重装器写入一个值</li>
+<li><code>TIM_GetCounter</code>，获取当前计数器的值，返回值就是当前计数器的值</li>
+<li><code>TIM_GetPrescalar</code>，获取当前预分频器的值</li>
+</ul>
+<h1 id="timer-c文件"><a href="#timer-c文件" class="headerlink" title="timer.c文件"></a>timer.c文件</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span>                  <span class="comment">// Device header</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">extern</span> <span class="type">uint16_t</span> Num;    <span class="comment">//告诉编译器，现在有Num这个变量，在别的文件中定义了，至于在哪自己去找</span></span><br><span class="line"><span class="comment">//此处并没有定义新的变量，操作的仍然是main.c文件中的Num</span></span><br><span class="line"><span class="comment">//当然也可以让中断函数放到main函数中，这样这个声明就不需要了</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Timer_Init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);</span><br><span class="line">	</span><br><span class="line">	TIM_InternalClockConfig(TIM2);</span><br><span class="line">	</span><br><span class="line">	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;</span><br><span class="line">	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;      <span class="comment">//指定时钟分频，选择1分频</span></span><br><span class="line">	TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;   <span class="comment">//选择向上计数</span></span><br><span class="line">	TIM_TimeBaseInitStructure.TIM_Period = <span class="number">10000</span> - <span class="number">1</span>;    <span class="comment">//period——ARR自动重装器的值</span></span><br><span class="line">	TIM_TimeBaseInitStructure.TIM_Prescaler = <span class="number">7200</span> - <span class="number">1</span>;        <span class="comment">//prescaler——PSC预分频器的值</span></span><br><span class="line">	<span class="comment">//通过设置PSC和ARR的取值，来设定计时的长短</span></span><br><span class="line">	<span class="comment">//72Mhz/7200=10k，10k的时间计10000个数，刚好就是1s，有一位是留给进位的</span></span><br><span class="line">	TIM_TimeBaseInitStructure.TIM_RepetitionCounter = <span class="number">0</span>;      <span class="comment">//repetitioncounter——重复计数器的值，但是只有高级计数器才有，我们直接置零便可</span></span><br><span class="line">	<span class="comment">//如果需要设置计数器的值，可以用setcounter和getcounter</span></span><br><span class="line">	TIM_TimeBaseInit(TIM2, &amp;TIM_TimeBaseInitStructure);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	TIM_ClearFlag(TIM2, TIM_FLAG_Update);   <span class="comment">//手动清除标志位，避免刚初始化晚就进中断的问题。ChatGPT说TIM_ClearITFlag()函数只会清除中断相关标志位，因此涉及到中断标志位的清除推荐使用这个避免清除了其他标志位造成出错</span></span><br><span class="line">	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);  <span class="comment">//ITupdate，更新参数，使能中断</span></span><br><span class="line">	</span><br><span class="line">	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);        <span class="comment">//选择分组2</span></span><br><span class="line">	</span><br><span class="line">	NVIC_InitTypeDef NVIC_InitStructure;</span><br><span class="line">	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;    <span class="comment">//中断通道</span></span><br><span class="line">	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;</span><br><span class="line">	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = <span class="number">2</span>;</span><br><span class="line">	NVIC_InitStructure.NVIC_IRQChannelSubPriority = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//上面两个是抢占优先级和响应优先级</span></span><br><span class="line">	NVIC_Init(&amp;NVIC_InitStructure);</span><br><span class="line">	</span><br><span class="line">	TIM_Cmd(TIM2, ENABLE);   <span class="comment">//启动定时器，产生更新就会触发中断</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*   当定时器产生更新时，这个函数就会被调用</span></span><br><span class="line"><span class="comment">void TIM2_IRQHandler(void)</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">	if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET)   //检查标志位</span></span><br><span class="line"><span class="comment">	&#123;</span></span><br><span class="line"><span class="comment">		</span></span><br><span class="line"><span class="comment">		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);   //最后清除标志位</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<h1 id="定时器外部时钟"><a href="#定时器外部时钟" class="headerlink" title="定时器外部时钟"></a>定时器外部时钟</h1>
   </div>
   
   
@@ -2437,10 +2462,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-06T18:49:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-07T22:45:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 6, 2023</p>
+    <p>更新于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2449,8 +2474,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>关于博客</p></a></div>
-  <span hidden itemprop="keywords">关于博客</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STM32/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STM32</p></a></div>
+  <span hidden itemprop="keywords">STM32</span>
 
 
         
@@ -2463,7 +2488,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/&title=6-2 定时器定时中断 - TAN's Blog&summary="
           
           >
           
@@ -2475,7 +2500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/&title=6-2 定时器定时中断 - TAN's Blog&summary="
           
           >
           
@@ -2487,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/&title=6-2 定时器定时中断 - TAN's Blog&summary="
           
           >
           
@@ -2520,24 +2545,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/05/06/update1.0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>23.5.6更新</p>
-          <p class='content'>更新内容
-新增小组件
-标签
-分类
-
-
-新增评论系统
-支持github登录
-
-
-大量优化了文章阅读界面
-增加站内搜索系统
-
-</p>
+        <a class='prev' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>6-3 定时器外部时钟</p>
+          <p class='content'>[[6-2 定时器定时中断]]
+123456789101112131415161718192021222324252627282930313233343536373839404142434445...</p>
         </a>
       
+      
+        <a class='next' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-1_TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/'>
+          <p class='title'>6-1 TIM定时器中断<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[[05_3 旋转编码器]]简介TIM定时器
+
+定时器可以对输入的时钟进行&#x3D;&#x3D;计数&#x3D;&#x3D;，并在计数值达到设定值时&#x3D;&#x3D;触发中断
+16计数器...</p>
+        </a>
       
     </div>
   
@@ -2552,7 +2573,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/05/03/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2678,7 +2699,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#6-1-TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD"><span class="toc-text">[[6-1_TIM定时中断]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%AD%E6%96%AD"><span class="toc-text">定时器中断</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%93%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90"><span class="toc-text">库函数解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#timer-c%E6%96%87%E4%BB%B6"><span class="toc-text">timer.c文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F"><span class="toc-text">定时器外部时钟</span></a></li></ol>
     </div>
   </section>
 
@@ -3240,7 +3261,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/代码/","name":"代码"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/03/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/03/hello-world/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/03/hello-world/","wordCount":0,"datePublished":"2023-05-03T07:18:32.845Z","dateModified":"2023-05-06T10:49:57.351Z","articleSection":"代码","keywords":"关于博客","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/04-定时器/6-2 定时器定时中断/","name":"6-2 定时器定时中断"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"6-2 定时器定时中断","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/","wordCount":0,"datePublished":"2023-05-07T14:47:18.636Z","dateModified":"2023-05-07T14:45:29.185Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

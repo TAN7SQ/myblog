@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/05/03/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2023/05/07/01-gpio基本用法/03_1 led输出/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - TAN's Blog</title>
-  <meta name="keywords" content="关于博客,null">
+  <title>03_1 LED输出 - TAN's Blog</title>
+  <meta name="keywords" content="STM32,null">
   <meta desc name="description" content="this is TAN7 blog - TAN7 - TAN's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/05/03/hello-world/index.html">
+<meta property="og:title" content="03_1 LED输出">
+<meta property="og:url" content="http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="[[02_GPIO介绍]]示意图 注意：keilkill.bat程序可以删掉中间文件，这样体积就可以大大减小回顾操作顺序：  使用RCC开启GPIO的时钟 使用GPIO_Init初始化GPIO 使用输出或者输入的函数控制GPIO  RCC的常用函数GPIO_DeInit初始化GPIO，调用这个函数所指定的GPIO外设会被复位GPIO_AFIODeInit可以复位AFIO外设GPIO_Init用结构">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-03T07:18:32.845Z">
-<meta property="article:modified_time" content="2023-05-06T10:49:57.351Z">
+<meta property="article:published_time" content="2023-05-07T14:47:18.551Z">
+<meta property="article:modified_time" content="2023-05-07T14:39:57.037Z">
 <meta property="article:author" content="TAN7">
-<meta property="article:tag" content="关于博客">
+<meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2322,7 +2322,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/01-GPIO基本用法/03_1 LED输出/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2343,7 +2343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        03_1 LED输出
       </h1>
       <div class='new-meta-box'>
         
@@ -2362,10 +2362,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url"><span itemprop="name">代码</span></a>
+        <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
       </span>
     
   </div>
@@ -2374,10 +2374,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-03T15:18:32+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 3, 2023</p>
+    <p>发布于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2400,19 +2400,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h1 id="02-GPIO介绍"><a href="#02-GPIO介绍" class="headerlink" title="[[02_GPIO介绍]]"></a>[[02_GPIO介绍]]</h1><h1 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h1><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230405173144.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230405173144.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|875"></p>
+<p>注意：keilkill.bat程序可以删掉中间文件，这样体积就可以大大减小<br>回顾操作顺序：</p>
+<ol>
+<li>使用RCC开启GPIO的时钟</li>
+<li>使用GPIO_Init初始化GPIO</li>
+<li>使用输出或者输入的函数控制GPIO</li>
+</ol>
+<p>RCC的常用函数<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426201900.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426201900.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><code>GPIO_DeInit</code>初始化GPIO，调用这个函数所指定的GPIO外设会被复位<br><code>GPIO_AFIODeInit</code>可以复位AFIO外设<br><code>GPIO_Init</code>用<em>结构体</em>的参数来初始化GPIO口，需要先定义一个结构体变量，再给结构体赋值，最后再调用这个函数，这个函数就会自动读取结构体的值，然后自动把外设的各个参数配置好<br><code>GPIO_StructInit</code>可以把结构体变量赋一个默认值<br>接下来是GPIO的读取函数<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426203146.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426203146.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|500"><br>然后是GPIO的写入函数<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426203206.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426203206.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span>                  <span class="comment">// Device header</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Delay.h&quot;</span>       <span class="comment">//delay函数直接拿来用就行，不需要问为什么</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);     <span class="comment">//RCC使能</span></span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;         <span class="comment">//GPIO的结构体初始化</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;       <span class="comment">//定义其中的结构体变量</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;          </span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line">	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);           <span class="comment">//然后引用GPIO初始化</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_ResetBits(GPIOA, GPIO_Pin_0);      <span class="comment">//分别是3种不同的输入方式</span></span><br><span class="line">		Delay_ms(<span class="number">500</span>);                       <span class="comment">//注意这里是Bits，说明这个函数的参数可以是PIN的各种组合</span></span><br><span class="line">		GPIO_SetBits(GPIOA, GPIO_Pin_0);         <span class="comment">//这种是通过向GPIOA一整排set和reset来控制</span></span><br><span class="line">		Delay_ms(<span class="number">500</span>);</span><br><span class="line">		</span><br><span class="line">		GPIO_WriteBit(GPIOA, GPIO_Pin_0, Bit_RESET);      <span class="comment">//这个是通过向具体的GPIOA中的A0写数据来控制</span></span><br><span class="line">		Delay_ms(<span class="number">500</span>);</span><br><span class="line">		GPIO_WriteBit(GPIOA, GPIO_Pin_0, Bit_SET);</span><br><span class="line">		Delay_ms(<span class="number">500</span>);</span><br><span class="line">		</span><br><span class="line">		GPIO_WriteBit(GPIOA, GPIO_Pin_0, (BitAction)<span class="number">0</span>);    <span class="comment">//其中的BitAction是在库函数中的声明，是枚举类型，强制类型转化便可以正常输出</span></span><br><span class="line">		Delay_ms(<span class="number">500</span>);</span><br><span class="line">		GPIO_WriteBit(GPIOA, GPIO_Pin_0, (BitAction)<span class="number">1</span>);</span><br><span class="line">		Delay_ms(<span class="number">500</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="GPIO的8种输入模式"><a href="#GPIO的8种输入模式" class="headerlink" title="GPIO的8种输入模式"></a>GPIO的8种输入模式</h1><p>  AIN（Analog IN)：模拟输入<br>  IN_FLOATING：浮空输入<br>  IPD（In Pull Down）是下拉输入<br>  IPU（In Pull Up）是上拉输入<br>  Out_OD：开漏输出<br>    开漏输出的高电平相当于高阻态，没有输出能力，低电平有驱动能力<br>  Out_OO：推挽输出<br>高低电平均有驱动能力，所以一般的输出用推挽输出就可以了，但有一个问题是输出口不能串联<br>  AF_OD（Atl Open Drain）：复用开漏<br>  AF_PP（Atl Push Pull）：复用推挽</p>
+<p>System文件夹是用来存放系统的资源：比方说Delay函数</p>
+<h1 id="LED闪烁"><a href="#LED闪烁" class="headerlink" title="LED闪烁"></a>LED闪烁</h1><ul>
+<li>接线图<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426222211.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426222211.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|500"></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span>                  <span class="comment">// Device header</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Delay.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);       <span class="comment">//此处也是需要开启GPIOA的使能</span></span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;</span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All;           <span class="comment">//直接使用GPIO_ALL 来开启全部端口</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|     <span class="comment">//可以使用或|来进行多位的赋值</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line">	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0001</span>);	<span class="comment">//0000 0000 0000 0001    因为是低电平点亮，所以要取反</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0002</span>);	<span class="comment">//0000 0000 0000 0010</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0004</span>);	<span class="comment">//0000 0000 0000 0100</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0008</span>);	<span class="comment">//0000 0000 0000 1000</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0010</span>);	<span class="comment">//0000 0000 0001 0000</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0020</span>);	<span class="comment">//0000 0000 0010 0000</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0040</span>);	<span class="comment">//0000 0000 0100 0000</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		GPIO_Write(GPIOA, ~<span class="number">0x0080</span>);	<span class="comment">//0000 0000 1000 0000</span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h1 id="蜂鸣器"><a href="#蜂鸣器" class="headerlink" title="蜂鸣器"></a>蜂鸣器</h1><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426222150.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426222150.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|500"></p>
+<blockquote>
+<p>注意不要是要使用A15，B3，B4，这三个端口默认是JTAG的调试端口，如果想正常使用还需要外加配置<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426222516.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230426222516.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span>                  <span class="comment">// Device header</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Delay.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);       <span class="comment">//此处也是需要开启GPIOB的使能，蜂鸣器使用的是B12输出</span></span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;</span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;           <span class="comment">//直接使用GPIO_ALL 来开启全部端口</span></span><br><span class="line">	<span class="comment">//GPIO_InitStructure.GPIO_Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|     //可以使用或|来进行多位的赋值</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line">	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);  <span class="comment">//记得要取地址</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_ResetBits(GPIOB, GPIO_Pin_12);   <span class="comment">//因为这个蜂鸣器是有源蜂鸣器，所以直接输入高电平就可以响    </span></span><br><span class="line">		Delay_ms(<span class="number">100</span>);                       </span><br><span class="line">		GPIO_SetBits(GPIOB, GPIO_Pin_12);         </span><br><span class="line">		Delay_ms(<span class="number">100</span>);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>[[03_2 GPIO输入]]</p>
 
   </div>
   
@@ -2437,10 +2448,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-06T18:49:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-07T22:39:57+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 6, 2023</p>
+    <p>更新于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2449,8 +2460,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>关于博客</p></a></div>
-  <span hidden itemprop="keywords">关于博客</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STM32/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STM32</p></a></div>
+  <span hidden itemprop="keywords">STM32</span>
 
 
         
@@ -2463,7 +2474,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/&title=03_1 LED输出 - TAN's Blog&summary="
           
           >
           
@@ -2475,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/&title=03_1 LED输出 - TAN's Blog&summary="
           
           >
           
@@ -2487,7 +2498,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/&title=03_1 LED输出 - TAN's Blog&summary="
           
           >
           
@@ -2520,8 +2531,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/05/06/update1.0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>23.5.6更新</p>
+        <a class='prev' href='/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>03_2 GPIO输入</p>
+          <p class='content'>[[03_1 LED输出]]按键介绍
+按键:常见的输入设备，按下导通，松手断开
+按键会存在抖动
+
+
+
+传感器模块介绍
+传感器：光敏电阻&#x2F;热敏电阻&#x2F;红外接收管
+传感器的元件的电...</p>
+        </a>
+      
+      
+        <a class='next' href='/2023/05/06/update1.0/'>
+          <p class='title'>23.5.6更新<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>更新内容
 新增小组件
 标签
@@ -2538,7 +2563,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </p>
         </a>
       
-      
     </div>
   
   <!-- Custom Files postEnd begin-->
@@ -2552,7 +2576,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/05/03/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2678,7 +2702,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#02-GPIO%E4%BB%8B%E7%BB%8D"><span class="toc-text">[[02_GPIO介绍]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="toc-text">示意图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GPIO%E7%9A%848%E7%A7%8D%E8%BE%93%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">GPIO的8种输入模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LED%E9%97%AA%E7%83%81"><span class="toc-text">LED闪烁</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%9C%82%E9%B8%A3%E5%99%A8"><span class="toc-text">蜂鸣器</span></a></li></ol>
     </div>
   </section>
 
@@ -3240,7 +3264,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/代码/","name":"代码"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/03/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/03/hello-world/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/03/hello-world/","wordCount":0,"datePublished":"2023-05-03T07:18:32.845Z","dateModified":"2023-05-06T10:49:57.351Z","articleSection":"代码","keywords":"关于博客","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/01-GPIO基本用法/03_1 LED输出/","name":"03_1 LED输出"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"03_1 LED输出","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/","wordCount":0,"datePublished":"2023-05-07T14:47:18.551Z","dateModified":"2023-05-07T14:39:57.037Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/05/03/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2023/05/07/03-中断/05_2 红外对射式传感器计次/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - TAN's Blog</title>
-  <meta name="keywords" content="关于博客,null">
+  <title>05_2 红外对射式传感器计次 - TAN's Blog</title>
+  <meta name="keywords" content="STM32,null">
   <meta desc name="description" content="this is TAN7 blog - TAN7 - TAN's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/05/03/hello-world/index.html">
+<meta property="og:title" content="05_2 红外对射式传感器计次">
+<meta property="og:url" content="http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="[[04_2_keil调试工具]]红外对射式传感器接线图 1.配置中断配置中断的流程从GPIO一直到NVIC这一路中出现的外设模块都配置好  配置RCC，将涉及到的外设时钟都打开 配置GPIO，选择端口为输入模式 配置AFIO，选择这一路的GPIO，连接到后面的EXTI 配置EXTI，选择边沿触发方式（上升下降双边）、触发响应方式（中断响应或事件响应） 配置NVIC，外部中断信号就能进入CPU">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-03T07:18:32.845Z">
-<meta property="article:modified_time" content="2023-05-06T10:49:57.351Z">
+<meta property="article:published_time" content="2023-05-07T14:47:18.604Z">
+<meta property="article:modified_time" content="2023-05-07T14:43:46.869Z">
 <meta property="article:author" content="TAN7">
-<meta property="article:tag" content="关于博客">
+<meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2322,7 +2322,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_2 红外对射式传感器计次/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2343,7 +2343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        05_2 红外对射式传感器计次
       </h1>
       <div class='new-meta-box'>
         
@@ -2362,10 +2362,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url"><span itemprop="name">代码</span></a>
+        <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
       </span>
     
   </div>
@@ -2374,10 +2374,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-03T15:18:32+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 3, 2023</p>
+    <p>发布于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2400,19 +2400,72 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h1 id="04-2-keil调试工具"><a href="#04-2-keil调试工具" class="headerlink" title="[[04_2_keil调试工具]]"></a>[[04_2_keil调试工具]]</h1><h1 id="红外对射式传感器接线图"><a href="#红外对射式传感器接线图" class="headerlink" title="红外对射式传感器接线图"></a>红外对射式传感器接线图</h1><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501160015.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501160015.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|275"></p>
+<h1 id="1-配置中断"><a href="#1-配置中断" class="headerlink" title="1.配置中断"></a>1.配置中断</h1><h2 id="配置中断的流程"><a href="#配置中断的流程" class="headerlink" title="配置中断的流程"></a>配置中断的流程</h2><p>从GPIO一直到NVIC这一路中出现的外设模块都配置好</p>
+<ol>
+<li>配置RCC，将涉及到的外设时钟都打开</li>
+<li>配置GPIO，选择端口为输入模式</li>
+<li>配置AFIO，选择这一路的GPIO，连接到后面的EXTI</li>
+<li>配置EXTI，选择边沿触发方式（上升下降双边）、触发响应方式（中断响应或事件响应）</li>
+<li>配置NVIC，外部中断信号就能进入CPU</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong></p>
+<ol>
+<li>EXTI和NVIC（使用内核的时钟）这两个外设时钟是一直开启着的</li>
+<li>中断函数的名字是固定的，名字可以参考启动文件，这里的函数名都是固定的<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501200243.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501200243.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|500"></li>
+<li>中断函数都是无参无返回值的，void func(void)</li>
+<li>完成中断后记得要清除标记位，最下面那行，然后在这两个红框之间可以放我们想要的函数<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501200536.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501200536.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|500"></li>
+</ol>
+</blockquote>
+<h1 id="AFIO库函数"><a href="#AFIO库函数" class="headerlink" title="AFIO库函数"></a>AFIO库函数</h1><ul>
+<li>AFIO的库函数在<code>GPIO.h</code>文件夹中<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501161812.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501161812.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|475"><ul>
+<li><code>GPIO_PinRemapConfig</code>用于进行引脚重映射，第一个参数选择重映射的方式，第二个参数是新的状态</li>
+<li><code>GPIO_WXTILineConfig</code>可以配置AFIO的数据选择器，来选择我们想要的中断引脚<strong>用这个</strong></li>
+<li><code>GPIO_ETH_MediaInterfaceConfig</code>这个是和以太网有关的，我们这个芯片没有以太网，暂时用不到</li>
+</ul>
+</li>
+</ul>
+<h1 id="EXTI库函数"><a href="#EXTI库函数" class="headerlink" title="EXTI库函数"></a>EXTI库函数</h1><ul>
+<li>在<code>exti.h</code>文件夹下<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501162644.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501162644.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><ul>
+<li><code>EXTI_DeInit</code>清除EXTI配置，恢复成上电默认的状态</li>
+<li><code>EXTI_Init</code>初始化EXTI</li>
+<li><code>EXTI_GenerateSWInterrupt</code>用于<strong>软件触发外部中断</strong>，调用这个函数，参数给一个指定的中断线，就能软件触发一次这个外部中断</li>
+<li>剩下的是库函数的模板函数，在外设运行中，会产生一些状态标志位，这些标志位会放到&#x3D;&#x3D;状态寄存器&#x3D;&#x3D;，当我们需要查看这些标志位的时候，就可以用到这四个函数<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501163130.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501163130.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><ul>
+<li>在&#x3D;&#x3D;主程序&#x3D;&#x3D;中查看标志位，<code>GetFlagStatus</code>可以获取指定的标志位是否被置一，<code>ClearFlag</code>可以对置一的标志位进行清除</li>
+<li>在&#x3D;&#x3D;中断中&#x3D;&#x3D;需要查看标志位可以用下面量函数，<code>GetITStatus</code>获取中断标志位是否被置一，<code>ClearIPendingBit</code>清楚中断挂起标志位</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="NVIC库函数"><a href="#NVIC库函数" class="headerlink" title="NVIC库函数"></a>NVIC库函数</h1><p>由于NVIC是内核外设，所以库函数被分配到杂项<code>misc.c</code>文件中</p>
+<ul>
+<li><code>NVIC_PriorityGroupConfig</code>用于&#x3D;&#x3D;中断分组&#x3D;&#x3D;，参数是中断分组的方式<ul>
+<li>pre-emption priority 先占优先级-抢占优先级</li>
+<li>subpriority 从占优先级- 响应优先级</li>
+<li><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501195351.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501195351.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></li>
+</ul>
+</li>
+<li><code>NVIC_SetVectorTable</code>设置中断向量表</li>
+<li><code>NVIC_SystemLPConfig</code>系统低功耗配置，一般物联网会有要求</li>
+</ul>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int16_t</span> CountSensor_Count;  <span class="comment">//在此处定义一个全局变量供给在中断中使用</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CountSensor_Init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);       <span class="comment">//开启GPIO的时钟</span></span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);          <span class="comment">//开启AFIO的时钟</span></span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;                 <span class="comment">//初始化GPIO</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;</span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14;</span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line">	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line">	</span><br><span class="line">	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource14);      <span class="comment">//配置AFIO</span></span><br><span class="line">	</span><br><span class="line">	EXTI_InitTypeDef EXTI_InitStructure;</span><br><span class="line">	EXTI_InitStructure.EXTI_Line = EXTI_Line14;     <span class="comment">//指定需要跳转的中断线</span></span><br><span class="line">	EXTI_InitStructure.EXTI_LineCmd = ENABLE;         <span class="comment">//指定中断线的新状态</span></span><br><span class="line">	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;         <span class="comment">//指定选择的中断线的模式，</span></span><br><span class="line">	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;      <span class="comment">//选择触发模式 </span></span><br><span class="line">	EXTI_Init(&amp;EXTI_InitStructure);</span><br><span class="line">	</span><br><span class="line">	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);       <span class="comment">//NVIC是核内外设，被分配到，misc.c文件中</span></span><br><span class="line">	</span><br><span class="line">	NVIC_InitTypeDef NVIC_InitStructure;</span><br><span class="line">	NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;      <span class="comment">//指定中断通道是开启或关闭，指定开启EXTI15~10开启</span></span><br><span class="line">	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;      <span class="comment">//指定中断通道是使能还是失能</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">//我们选择的分组是组2，所以对应优先级的取值范围是0~3	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;     //指定抢占优先级   但是因为这里只有一个中断，就随便取的值</span></span><br><span class="line">	NVIC_InitStructure.NVIC_IRQChannelSubPriority = <span class="number">1</span>;      <span class="comment">//指定响应优先级</span></span><br><span class="line">	NVIC_Init(&amp;NVIC_InitStructure);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">uint16_t</span> <span class="title function_">CountSensor_Get</span><span class="params">(<span class="type">void</span>)</span>        <span class="comment">//此处直接返回</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> CountSensor_Count;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">EXTI15_10_IRQHandler</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (EXTI_GetITStatus(EXTI_Line14) == SET)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">/*如果出现数据乱跳的现象，可再次判断引脚电平，以避免抖动*/</span></span><br><span class="line">		<span class="keyword">if</span> (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_14) == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			CountSensor_Count ++;</span><br><span class="line">		&#125;</span><br><span class="line">		EXTI_ClearITPendingBit(EXTI_Line14);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="不同的触发模式对现象的影响"><a href="#不同的触发模式对现象的影响" class="headerlink" title="不同的触发模式对现象的影响"></a>不同的触发模式对现象的影响</h2><ul>
+<li>选择上升沿触发<ul>
+<li>程序会在挡片拿走的时候计次</li>
+</ul>
+</li>
+<li>选择下降沿触发<ul>
+<li>程序会在挡片落下的时候计次</li>
+</ul>
+</li>
+<li>选择双边沿触发<ul>
+<li>程序会在挡片落下和拿走的时候都计次，也就是变化两次</li>
+</ul>
+</li>
+</ul>
 
   </div>
   
@@ -2437,10 +2490,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-06T18:49:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-07T22:43:46+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 6, 2023</p>
+    <p>更新于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2449,8 +2502,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>关于博客</p></a></div>
-  <span hidden itemprop="keywords">关于博客</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STM32/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STM32</p></a></div>
+  <span hidden itemprop="keywords">STM32</span>
 
 
         
@@ -2463,7 +2516,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/&title=05_2 红外对射式传感器计次 - TAN's Blog&summary="
           
           >
           
@@ -2475,7 +2528,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/&title=05_2 红外对射式传感器计次 - TAN's Blog&summary="
           
           >
           
@@ -2487,7 +2540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/&title=05_2 红外对射式传感器计次 - TAN's Blog&summary="
           
           >
           
@@ -2520,24 +2573,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/05/06/update1.0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>23.5.6更新</p>
-          <p class='content'>更新内容
-新增小组件
-标签
-分类
+        <a class='prev' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_3%20%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>05_3 旋转编码器</p>
+          <p class='content'>[[05_2 红外对射式传感器计次]]细节问题由于旋转编码器会存在两条相位差为90°波形图，所以会在中断触发上存在问题![[5-1旋转编码器#^2ad2e9]]
 
+最终的解决办法是：
 
-新增评论系统
-支持github登录
-
-
-大量优化了文章阅读界面
-增加站内搜索系统
-
-</p>
+在a波形...</p>
         </a>
       
+      
+        <a class='next' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/'>
+          <p class='title'>05_1 EXTI外部中断<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[[04_2_keil调试工具]]中断系统
+中断：在主程序运行过程中，出现了特定的中断触发条件（中断源），使得CPU暂停当前正在运行的程序，转而取处理中断程序，处理完成后又返回原来被暂停的位置继...</p>
+        </a>
       
     </div>
   
@@ -2552,7 +2602,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/05/03/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2678,7 +2728,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#04-2-keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-text">[[04_2_keil调试工具]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E6%8E%A5%E7%BA%BF%E5%9B%BE"><span class="toc-text">红外对射式传感器接线图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%AD"><span class="toc-text">1.配置中断</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%AD%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="toc-text">配置中断的流程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AFIO%E5%BA%93%E5%87%BD%E6%95%B0"><span class="toc-text">AFIO库函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#EXTI%E5%BA%93%E5%87%BD%E6%95%B0"><span class="toc-text">EXTI库函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NVIC%E5%BA%93%E5%87%BD%E6%95%B0"><span class="toc-text">NVIC库函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E7%9A%84%E8%A7%A6%E5%8F%91%E6%A8%A1%E5%BC%8F%E5%AF%B9%E7%8E%B0%E8%B1%A1%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">不同的触发模式对现象的影响</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3240,7 +3290,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/代码/","name":"代码"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/03/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/03/hello-world/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/03/hello-world/","wordCount":0,"datePublished":"2023-05-03T07:18:32.845Z","dateModified":"2023-05-06T10:49:57.351Z","articleSection":"代码","keywords":"关于博客","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/03-中断/05_2 红外对射式传感器计次/","name":"05_2 红外对射式传感器计次"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"05_2 红外对射式传感器计次","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/","wordCount":0,"datePublished":"2023-05-07T14:47:18.604Z","dateModified":"2023-05-07T14:43:46.869Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

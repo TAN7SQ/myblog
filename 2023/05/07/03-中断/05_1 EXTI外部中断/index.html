@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/05/03/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2023/05/07/03-中断/05_1 exti外部中断/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - TAN's Blog</title>
-  <meta name="keywords" content="关于博客,null">
+  <title>05_1 EXTI外部中断 - TAN's Blog</title>
+  <meta name="keywords" content="STM32,null">
   <meta desc name="description" content="this is TAN7 blog - TAN7 - TAN's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/05/03/hello-world/index.html">
+<meta property="og:title" content="05_1 EXTI外部中断">
+<meta property="og:url" content="http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="[[04_2_keil调试工具]]中断系统 中断：在主程序运行过程中，出现了特定的中断触发条件（中断源），使得CPU暂停当前正在运行的程序，转而取处理中断程序，处理完成后又返回原来被暂停的位置继续运行 中断优先级：当有多个中断源同时申请中断,CPU 会根据中断源的轻重缓急进行裁决，优先响应更加紧急的中断源 中断嵌套：当一个中断程序正在运行时，又有新的更高的优先级的中断源申请中断，CPU再次暂停当前">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-03T07:18:32.845Z">
-<meta property="article:modified_time" content="2023-05-06T10:49:57.351Z">
+<meta property="article:published_time" content="2023-05-07T14:47:18.602Z">
+<meta property="article:modified_time" content="2023-05-07T14:43:17.343Z">
 <meta property="article:author" content="TAN7">
-<meta property="article:tag" content="关于博客">
+<meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2322,7 +2322,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_1 EXTI外部中断/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2343,7 +2343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        05_1 EXTI外部中断
       </h1>
       <div class='new-meta-box'>
         
@@ -2362,10 +2362,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url"><span itemprop="name">代码</span></a>
+        <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
       </span>
     
   </div>
@@ -2374,10 +2374,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-03T15:18:32+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 3, 2023</p>
+    <p>发布于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2400,19 +2400,60 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <h1 id="04-2-keil调试工具"><a href="#04-2-keil调试工具" class="headerlink" title="[[04_2_keil调试工具]]"></a>[[04_2_keil调试工具]]</h1><h1 id="中断系统"><a href="#中断系统" class="headerlink" title="中断系统"></a>中断系统</h1><ul>
+<li><strong>中断</strong>：在主程序运行过程中，出现了特定的中断触发条件（中断源），使得CPU暂停当前正在运行的程序，转而取处理中断程序，处理完成后又返回原来被暂停的位置继续运行</li>
+<li><strong>中断优先级</strong>：当有多个中断源同时申请中断,CPU 会根据中断源的轻重缓急进行裁决，优先响应更加紧急的中断源</li>
+<li><strong>中断嵌套</strong>：当一个中断程序正在运行时，又有新的更高的优先级的中断源申请中断，CPU再次暂停当前的中断程序，转而取处理新的中断程序，处理完后再依次进行返回</li>
+</ul>
+<h1 id="EXTI简介"><a href="#EXTI简介" class="headerlink" title="EXTI简介"></a>EXTI简介</h1><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501142531.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501142531.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>当中断来临时，由硬件自动调用整个函数</p>
+<ul>
+<li>整体结构图<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501152552.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501152552.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><ul>
+<li>AFIO中断引脚选择：可以选择3个GPIO的16个引脚里选择其中一个连接到后面的EXTI通道里，所以<strong>相同的PIN不能触发中断</strong></li>
+<li>后面会经过EXTI边沿检测及控制，讲信号分成两部分：<strong>NVIC和其他外设</strong><ul>
+<li>注意：外部中断的9<del>5，和15</del>10，分配到同一个通道里，也就是外部中断的9<del>5会触发同一个中断函数，15</del>10同理</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="AFIO"><a href="#AFIO" class="headerlink" title="AFIO"></a>AFIO</h2><p>AFIO复用IO口</p>
+<ul>
+<li>AFIO 主要用于引脚复用功能的选择和重定义</li>
+<li>在STM32中，AFIO主要完成<ul>
+<li>复用功能引脚重映射</li>
+<li>中断引脚选择</li>
+</ul>
+</li>
+</ul>
+<h2 id="触发方式："><a href="#触发方式：" class="headerlink" title="触发方式："></a>触发方式：</h2><ol>
+<li>&#x3D;&#x3D;上升沿&#x3D;&#x3D;：电平从低电平变到高电平的瞬间触发中断</li>
+<li>&#x3D;&#x3D;下降沿&#x3D;&#x3D;：与上面相反</li>
+<li>&#x3D;&#x3D;双边沿&#x3D;&#x3D;：上升沿和下降沿都可以触发中断</li>
+<li>软件触发：不需要电平变化，程序一句话就可以触发中断</li>
+</ol>
+<h2 id="响应方式"><a href="#响应方式" class="headerlink" title="响应方式"></a>响应方式</h2><p><strong>中断响应</strong>：是正常的流程，引脚电平触发中断<br><strong>事件触发</strong>：外部中断信号就不会通向CPU了，而是&#x3D;&#x3D;通向其他外设，用来触发其他外设的操作&#x3D;&#x3D;，属于外设之间的联合工作</p>
+<ul>
+<li>比如触发ADC转化、触发DMA等</li>
+</ul>
+<h1 id="STM32中断"><a href="#STM32中断" class="headerlink" title="STM32中断"></a>STM32中断</h1><p><em>68</em>个可屏蔽中断通道、包含&#x3D;&#x3D;EXTI外部中断、TIM定时器、ADC模数转换器、USART串口、SPI通信、I2C通信、RTC实时时钟&#x3D;&#x3D;等多个外设（具体数量以对应型号的数据手册为准）</p>
+<ul>
+<li>模块多、且几乎所有外设都可以申请中断</li>
+</ul>
+<p>使用NVIC同一管理中断、每个中断通道都拥有16个可编程的优先级，可对优先级进行分组<br><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501143421.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501143421.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><u>看门狗WWDG</u>：如果程序卡死了，没有及时喂狗，窗口看门狗就会申请中断，让程序跳转到窗口看门够的中断程序中，我们可以在中断程序里进行一些错误检查，看看出现什么问题了<br>电源电压进检测PVD：如果供电电压不足，PVD电路就会申请中断，在中断中就可以知道是电池没电供电不足，要赶紧保存一下重要数据</p>
+<blockquote>
+<p>总而言之，当外设电路检测到有什么异常或者事件，需要提示一下CPU的时候，它就可以申请中断，让程序跳到对应的中断函数里运行一次，用来处理这个异常或事件</p>
+</blockquote>
+<h1 id="NVIC基本结构"><a href="#NVIC基本结构" class="headerlink" title="NVIC基本结构"></a>NVIC基本结构</h1><p>在STM32中用来统一分配中断优先级和管理中断，它是一个内核外设，是CPU小助手，类似优先编码器</p>
+<h2 id="NVIC的优先分组"><a href="#NVIC的优先分组" class="headerlink" title="NVIC的优先分组"></a>NVIC的优先分组</h2><ul>
+<li><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501145917.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230501145917.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><ul>
+<li>类似插队的形式叫做<strong>响应优先级</strong>，即处理完前一个程序后，插队进去优先处理</li>
+<li>可以直接打断当前叫做<strong>抢占优先级</strong>，类似前面所讲的中断嵌套</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>分组方式是我们自己选择，选好分组后，我们在配置优先级的时候，就要注意抢占优先级和响应优先级的取值范围了</p>
+</blockquote>
 
   </div>
   
@@ -2437,10 +2478,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-06T18:49:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-07T22:43:17+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 6, 2023</p>
+    <p>更新于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2449,8 +2490,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>关于博客</p></a></div>
-  <span hidden itemprop="keywords">关于博客</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STM32/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STM32</p></a></div>
+  <span hidden itemprop="keywords">STM32</span>
 
 
         
@@ -2463,7 +2504,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/&title=05_1 EXTI外部中断 - TAN's Blog&summary="
           
           >
           
@@ -2475,7 +2516,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/&title=05_1 EXTI外部中断 - TAN's Blog&summary="
           
           >
           
@@ -2487,7 +2528,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/&title=05_1 EXTI外部中断 - TAN's Blog&summary="
           
           >
           
@@ -2520,24 +2561,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/05/06/update1.0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>23.5.6更新</p>
-          <p class='content'>更新内容
-新增小组件
-标签
-分类
+        <a class='prev' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>05_2 红外对射式传感器计次</p>
+          <p class='content'>[[04_2_keil调试工具]]红外对射式传感器接线图
+1.配置中断配置中断的流程从GPIO一直到NVIC这一路中出现的外设模块都配置好
 
-
-新增评论系统
-支持github登录
-
-
-大量优化了文章阅读界面
-增加站内搜索系统
-
-</p>
+配置RCC，将涉及到的外设时钟都打开
+配置GPIO，...</p>
         </a>
       
+      
+        <a class='next' href='/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_2_keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/'>
+          <p class='title'>04_2 keil调试工具<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[[04_1_OLED调试工具]] Keil调试
+Debug设置
+设置界面
+左边是仿真模拟器调试，右边是硬件调试，我们选择硬件调试
+选择右上角放大镜，进入调试模式
+
+调试界面介绍
+
+从左到右依次...</p>
+        </a>
       
     </div>
   
@@ -2552,7 +2597,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/05/03/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2678,7 +2723,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#04-2-keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-text">[[04_2_keil调试工具]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F"><span class="toc-text">中断系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#EXTI%E7%AE%80%E4%BB%8B"><span class="toc-text">EXTI简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AFIO"><span class="toc-text">AFIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-text">触发方式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E6%96%B9%E5%BC%8F"><span class="toc-text">响应方式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#STM32%E4%B8%AD%E6%96%AD"><span class="toc-text">STM32中断</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NVIC%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-text">NVIC基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#NVIC%E7%9A%84%E4%BC%98%E5%85%88%E5%88%86%E7%BB%84"><span class="toc-text">NVIC的优先分组</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3240,7 +3285,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/代码/","name":"代码"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/03/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/03/hello-world/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/03/hello-world/","wordCount":0,"datePublished":"2023-05-03T07:18:32.845Z","dateModified":"2023-05-06T10:49:57.351Z","articleSection":"代码","keywords":"关于博客","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/03-中断/05_1 EXTI外部中断/","name":"05_1 EXTI外部中断"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"05_1 EXTI外部中断","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/","wordCount":0,"datePublished":"2023-05-07T14:47:18.602Z","dateModified":"2023-05-07T14:43:17.343Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

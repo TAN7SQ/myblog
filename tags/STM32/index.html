@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.10">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  
-  <link rel="canonical" href="http://example.com/2023/05/03/hello-world/"/>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="http://example.com/tags/stm32/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,18 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - TAN's Blog</title>
-  <meta name="keywords" content="关于博客,null">
+  <title>Tag: STM32 - TAN's Blog</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="this is TAN7 blog - TAN7 - TAN's Blog">
   
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/05/03/hello-world/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TAN&#39;s Blog">
+<meta property="og:url" content="http://example.com/tags/STM32/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="this is TAN7 blog">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-03T07:18:32.845Z">
-<meta property="article:modified_time" content="2023-05-06T10:49:57.351Z">
 <meta property="article:author" content="TAN7">
-<meta property="article:tag" content="关于博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2250,7 +2247,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class='cover-wrapper  search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC0285.jpg"></div>
 
@@ -2320,9 +2317,43 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
+
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/03/hello-world/">
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2331,241 +2362,712 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="this is TAN7 blog">
   </span>
   
-
-
+  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  <div class="article-meta" id="top">
+  
     
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/"  itemprop="url">
+        6-4TIM输出比较
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
     
-    
-      <h1 class="title" itemprop="name headline">
-        Hello World
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC1273.jpg" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC1273.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">TAN</p>
-  </a>
-</div>
+      
+        [[6-3定时器外部时钟]]输出比较简介
+OC（Output Compare）输出比较
+IC（Input Capture）输入捕获
+CC（Capture&#x2F;Compare）输入捕获和输出比较的单元
 
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url"><span itemprop="name">代码</span></a>
-      </span>
+
+输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形
+CCR是捕获和比较共用的...
+      
     
   </div>
-
-
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
           
         
-          
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-03T15:18:32+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 3, 2023</p>
-  </a>
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
 </div>
 
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-3定时器外部时钟/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/"  itemprop="url">
+        6-3 定时器外部时钟
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[6-2 定时器定时中断]]
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include &quot;stm32f10x.h&quot;                  // D...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
           
         
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-2 定时器定时中断/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/"  itemprop="url">
+        6-2 定时器定时中断
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[6-1_TIM定时中断]]定时器中断新建的Timer.c  &amp;  Timer.h文件在System文件夹下
+
+RCC开启时钟
+选择时基单元的时钟源，对于定时中断，我们就选择内部时钟源
+配置时基单元，包括预分频器、自动重装器、计数模式
+配置输出中断控制，阴虚更新中断到NVIC
+配置NVIC，在NVIC中打开定时器中断的通道，并分配一个优先级
+运行控制
+整个模块配置完成后，我们还需要...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
           
-            
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-1_TIM定时中断/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-1_TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/"  itemprop="url">
+        6-1 TIM定时器中断
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[05_3 旋转编码器]]简介TIM定时器
+
+定时器可以对输入的时钟进行&#x3D;&#x3D;计数&#x3D;&#x3D;，并在计数值达到设定值时&#x3D;&#x3D;触发中断
+16计数器、预分频器、自动重装器的时基单元，在72MHz计数时钟下可以实现最大59.65s的定时
+计数器：用于执行计数定时的寄存器，每来一个时钟，计数器+1
+预分频器：可以对计数器的时钟进行分频，让计数更灵活
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-1_TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_3 旋转编码器/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_3%20%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8/"  itemprop="url">
+        05_3 旋转编码器
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[05_2 红外对射式传感器计次]]细节问题由于旋转编码器会存在两条相位差为90°波形图，所以会在中断触发上存在问题![[5-1旋转编码器#^2ad2e9]]
+
+最终的解决办法是：
+
+在a波形是低电平的时候，触发中断，同时b电平是下降沿的时候判断为是正转
+反转同理：a是下降沿，b是低电平
+
+
+代码12345678910111213141516171819202122232425262728...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_3%20%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_2 红外对射式传感器计次/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/"  itemprop="url">
+        05_2 红外对射式传感器计次
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[04_2_keil调试工具]]红外对射式传感器接线图
+1.配置中断配置中断的流程从GPIO一直到NVIC这一路中出现的外设模块都配置好
+
+配置RCC，将涉及到的外设时钟都打开
+配置GPIO，选择端口为输入模式
+配置AFIO，选择这一路的GPIO，连接到后面的EXTI
+配置EXTI，选择边沿触发方式（上升下降双边）、触发响应方式（中断响应或事件响应）
+配置NVIC，外部中断信号就能进入CP...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_1 EXTI外部中断/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/"  itemprop="url">
+        05_1 EXTI外部中断
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[04_2_keil调试工具]]中断系统
+中断：在主程序运行过程中，出现了特定的中断触发条件（中断源），使得CPU暂停当前正在运行的程序，转而取处理中断程序，处理完成后又返回原来被暂停的位置继续运行
+中断优先级：当有多个中断源同时申请中断,CPU 会根据中断源的轻重缓急进行裁决，优先响应更加紧急的中断源
+中断嵌套：当一个中断程序正在运行时，又有新的更高的优先级的中断源申请中断，CPU再次暂...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/02-调参工具/04_2_keil调试工具/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_2_keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/"  itemprop="url">
+        04_2 keil调试工具
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[04_1_OLED调试工具]] Keil调试
+Debug设置
+设置界面
+左边是仿真模拟器调试，右边是硬件调试，我们选择硬件调试
+选择右上角放大镜，进入调试模式
+
+调试界面介绍
+
+从左到右依次是：&#x3D;&#x3D;单步运行&#x3D;&#x3D;、&#x3D;&#x3D;跳过当前单步运行&#x3D;&#x3D;、&#x3D;&#x3D;跳出当前函数单步运行&#x3D;&#x3D;、&...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_2_keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/02-调参工具/04_1_OLED调试工具/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_1_OLED%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/"  itemprop="url">
+        04_1 OLED测试工具
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[03_2 GPIO输入]]OLED简介
+OLED：有机发光二极管
+OLED显示屏：功耗低，响应速度快，宽视角（因为oled是自发光，在任何角度看都是清晰的，相反lcd只能正面看），轻薄柔韧
+供电：3~5.5V。通信协议：I2C&#x2F;SPI，分辨率：128*64
+
+调试方式
+串口调试：通过串口通信，将调试信息发送到电脑端，电脑使用串口助手显示调试信息
+显示屏调试：直接将显示器连接到单...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_1_OLED%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/01-GPIO基本用法/03_2 GPIO输入/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/"  itemprop="url">
+        03_2 GPIO输入
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[03_1 LED输出]]按键介绍
+按键:常见的输入设备，按下导通，松手断开
+按键会存在抖动
 
 
 
+传感器模块介绍
+传感器：光敏电阻&#x2F;热敏电阻&#x2F;红外接收管
+传感器的元件的电阻会随着外界的模拟量的变化而变化，通过与定值电阻分压即可得到模拟电压输出，再通过电压比较器进行二值化即可得到数字电压输出
+注意这其中一个传感器，N1为传感器电阻本身，上面的R1是用来和传感器电阻进行分...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
           
         
-        <!-- Custom Files topMeta begin-->
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
         
-        <!-- Custom Files topMeta end-->
+      
+    
+  </section>
+  
+    
+      <br>
+      <div class="prev-next">
+        
+        <p class="current">
+          1 / 2
+        </p>
+        
+          <a class="next" rel="next" href="/tags/STM32/page/2/">
+            <section class="post next white-box shadow floatable blur">
+              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
+        
       </div>
     
-  </div>
-
-
-  <div id="layoutHelper-page-plugins"></div>
-  <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-  </div>
   
-  
+
+
     
-    <div class='footer'>
-       <!-- 参考资料、相关资料等 -->
-      
-       <!-- 相关文章 -->
-      
-      <!-- 版权声明组件 -->
-      
-      <!-- 打赏组件 -->
-      
-    </div>
   
-  
-    
-
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-06T18:49:57+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 6, 2023</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>关于博客</p></a></div>
-  <span hidden itemprop="keywords">关于博客</span>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
-    </div>
-    <!-- Custom Files bottomMeta begin -->
-    
-    <!-- Custom Files bottomMeta end -->
-  </div>
-
-
-  
-  
-
-  
-    <div class="prev-next">
-      
-        <a class='prev' href='/2023/05/06/update1.0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>23.5.6更新</p>
-          <p class='content'>更新内容
-新增小组件
-标签
-分类
-
-
-新增评论系统
-支持github登录
-
-
-大量优化了文章阅读界面
-增加站内搜索系统
-
-</p>
-        </a>
-      
-      
-    </div>
-  
-  <!-- Custom Files postEnd begin-->
-  
-  <!-- Custom Files postEnd end-->
-</article>
-
-
-  
-
-
-  <article class="post white-box shadow floatable blur" id="comments">
-    <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/05/03/hello-world/index.html#comments">
-    </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
-    
-
-    <div id="layoutHelper-comments"></div>
-
-  </article>
-
-
-
-
-
-
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2574,6 +3076,71 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+<section class="widget blogger desktop mobile pjax">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box circle' href='/about/'>
+          <img no-lazy src='https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC1273.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>Keyboard Beyond Memories</h2>
+        
+        
+        
+          <p><span id="jinrishici-sentence">TAN's Blog</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fa-solid fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:1240973173@qq.com"
+              class="social fa-solid fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/volantis-x/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="/"
+              class="social fa-solid fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
     
   
 
@@ -2664,34 +3231,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <div class="widget-sticky pjax">
 
-  
-  
-
-
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-    </div>
-  </section>
-
-  
-
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2719,14 +3262,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
-
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=true;
+  pdata.ispage=false;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3240,7 +3782,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/代码/","name":"代码"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/03/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/03/hello-world/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/03/hello-world/","wordCount":0,"datePublished":"2023-05-03T07:18:32.845Z","dateModified":"2023-05-06T10:49:57.351Z","articleSection":"代码","keywords":"关于博客","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/STM32/","name":"STM32"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

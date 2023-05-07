@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/05/03/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2023/05/07/01-gpio基本用法/03_2 gpio输入/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - TAN's Blog</title>
-  <meta name="keywords" content="关于博客,null">
+  <title>03_2 GPIO输入 - TAN's Blog</title>
+  <meta name="keywords" content="STM32,null">
   <meta desc name="description" content="this is TAN7 blog - TAN7 - TAN's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/05/03/hello-world/index.html">
+<meta property="og:title" content="03_2 GPIO输入">
+<meta property="og:url" content="http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="[[03_1 LED输出]]按键介绍 按键:常见的输入设备，按下导通，松手断开 按键会存在抖动    传感器模块介绍 传感器：光敏电阻&#x2F;热敏电阻&#x2F;红外接收管 传感器的元件的电阻会随着外界的模拟量的变化而变化，通过与定值电阻分压即可得到模拟电压输出，再通过电压比较器进行二值化即可得到数字电压输出 注意这其中一个传感器，N1为传感器电阻本身，上面的R1是用来和传感器电阻进行分压，旁">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-03T07:18:32.845Z">
-<meta property="article:modified_time" content="2023-05-06T10:49:57.351Z">
+<meta property="article:published_time" content="2023-05-07T14:47:18.558Z">
+<meta property="article:modified_time" content="2023-05-07T14:39:47.301Z">
 <meta property="article:author" content="TAN7">
-<meta property="article:tag" content="关于博客">
+<meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2322,7 +2322,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/01-GPIO基本用法/03_2 GPIO输入/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2343,7 +2343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        03_2 GPIO输入
       </h1>
       <div class='new-meta-box'>
         
@@ -2362,10 +2362,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url"><span itemprop="name">代码</span></a>
+        <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
       </span>
     
   </div>
@@ -2374,10 +2374,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-03T15:18:32+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 3, 2023</p>
+    <p>发布于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2400,19 +2400,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h1 id="03-1-LED输出"><a href="#03-1-LED输出" class="headerlink" title="[[03_1 LED输出]]"></a>[[03_1 LED输出]]</h1><h2 id="按键介绍"><a href="#按键介绍" class="headerlink" title="按键介绍"></a>按键介绍</h2><ul>
+<li>按键:常见的输入设备，按下导通，松手断开<ul>
+<li>按键会存在抖动<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427173110.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427173110.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></li>
+</ul>
+</li>
+</ul>
+<h2 id="传感器模块介绍"><a href="#传感器模块介绍" class="headerlink" title="传感器模块介绍"></a>传感器模块介绍</h2><ul>
+<li>传感器：光敏电阻&#x2F;热敏电阻&#x2F;红外接收管<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427173328.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427173328.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|250"></li>
+<li>传感器的元件的电<u>阻会随着外界的模拟量的变化而变化</u>，通过与<span style="background:#40a9ff">定值电阻分压</span>即可得到模拟电压输出，再通过<span style="background:#40a9ff">电压比较器进行二值化</span>即可得到数字电压输出<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427173324.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427173324.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|500"><blockquote>
+<p>注意这其中一个传感器，N1为传感器电阻本身，上面的R1是用来和传感器电阻进行分压，旁边的电容作用是用来滤波（用来保证电路为稳定，在分析的时候可以忽略），然后可以用分压定理来分析一下传感器电阻的阻值变化对电压的影响<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427174121.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427174121.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="|150"><br>   当N1阻值变小时，下拉作用会增强，中间AO端的电压会拉低，极端情况下，AO输出被完全下拉，输出为0<br>   当N1阻值变大，下拉作用被减弱，中间的引脚由于R1的上拉作用，电压就会升高，极端情况下，N1阻值无穷大，相当于断路，输出电压被R1拉高至VCC</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="二值化模块（LM393）"><a href="#二值化模块（LM393）" class="headerlink" title="二值化模块（LM393）"></a>二值化模块（LM393）</h3><p>LM393是一个电压比较器芯片<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427174455.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427174455.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>中间红框是有两个独立的电压比较电路，其实这个电压比较器就是两个运算放大器[[51单片机的AD&#x2F;DA]]</p>
+<ul>
+<li>当同相输入端的电压大于反相输入端的电压时，输出会瞬间升为最大值VCC</li>
+<li>反之，当同相输入端的电压小于反相输入端的电压时，输出会瞬间降低为最小值GND</li>
+</ul>
+<p>这样就能<u>对模拟电路进行二值化</u></p>
+<h2 id="红外传感器"><a href="#红外传感器" class="headerlink" title="红外传感器"></a>红外传感器</h2><p>对于红外传感器，N1就是一个红外接收管，对应会多一个点亮红外发射管的电路，</p>
+<ul>
+<li>发射管发射红外光，</li>
+<li>接收管接收红外光，</li>
+<li>电位器直接换成了两个电阻进行分压，这样数字输出就是固定阈值的二值化</li>
+</ul>
+<h1 id="硬件电路"><a href="#硬件电路" class="headerlink" title="硬件电路"></a>硬件电路</h1><h2 id="按键的硬件电路"><a href="#按键的硬件电路" class="headerlink" title="按键的硬件电路"></a>按键的硬件电路</h2><p>可以分为上接和下接模式，一般选择下接，和LED接法类似，是电路设计的习惯和规范</p>
+<h3 id="一、直接与GND相连"><a href="#一、直接与GND相连" class="headerlink" title="一、直接与GND相连"></a>一、直接与GND相连</h3><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427180030.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427180030.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>随便选取一个GPIO口，通过K1接地，<br>当按键按下时，PA0被直接下拉到GND，此时读取PA0口的电压就是<strong>低电平</strong><br>当按键松手时，PA0被悬空，此时<u>悬空会导致引脚电压不确定</u>，所以在这种接法下，<span style="background:#ff4d4f">必须要求PA0是上拉输入模式</span>，否则会出现引脚电压不确定的错误现象<br>如果PA0是上拉输入模式，引脚再悬空，PA0就是高电平，所以这种模式下，按下为低电平，松开就是高电平</p>
+<h3 id="二、外部接上拉电阻"><a href="#二、外部接上拉电阻" class="headerlink" title="二、外部接上拉电阻"></a>二、外部接上拉电阻</h3><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427180840.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427180840.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>如果外部没有接上拉电阻，就必须要开启上拉输入模式。外接了上拉电阻就可以选择浮空输入</p>
+<ul>
+<li>当按键按下时，引脚直接接到GND，此时PA0的引脚可以配置为<strong>浮空输入</strong>或者<strong>上拉输入</strong><ul>
+<li>因为由内外电路双重控制，此时的高电平会更强一些，对应的高电平会更加稳定</li>
+<li>但是当引脚强行拉低时，损耗也会大一些</li>
+</ul>
+</li>
+</ul>
+<h3 id="三、上接接法"><a href="#三、上接接法" class="headerlink" title="三、上接接法"></a>三、上接接法</h3><p>单片机一般没有下拉模式，且下拉模式不强，不建议学<br><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427182135.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230427182135.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h1 id="按键控制LED"><a href="#按键控制LED" class="headerlink" title="按键控制LED"></a>按键控制LED</h1><ul>
+<li>C 语言数据类型<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230429214041.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230429214041.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></li>
+</ul>
+<p>注意：</p>
+<ol>
+<li>C语言中int是16位的，但是在stm32中int是32位，short是16位，long也是32位的</li>
+<li>注意<strong>stdint</strong>关键字，是C语言提供的有<code>stdint.h</code>头文件给前面的重命名，后面的<code>_t</code>的意思是typedefine 重命名，但是其实只是换一个名字而已</li>
+</ol>
+<h2 id="封装库函数"><a href="#封装库函数" class="headerlink" title="封装库函数"></a>封装库函数</h2><p>新建文件夹<code>hardware</code>用于存放&#x3D;&#x3D;硬件驱动&#x3D;&#x3D;，比如led<br>直接新建<code>.c/.h</code>的文件夹</p>
+<h3 id="led-c的文件"><a href="#led-c的文件" class="headerlink" title="led.c的文件"></a>led.c的文件</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED_Init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);      <span class="comment">//开启端口时钟</span></span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;             <span class="comment">//选择推挽输出</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2;                <span class="comment">//选择pin1和pin2</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;              <span class="comment">//选择时钟速度</span></span><br><span class="line">	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);</span><br><span class="line">	</span><br><span class="line">	GPIO_SetBits(GPIOA, GPIO_Pin_1 | GPIO_Pin_2);       <span class="comment">//setbit，高电平，led不点亮，这样能默认led是熄灭的状态</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED1_ON</span><span class="params">(<span class="type">void</span>)</span>                   <span class="comment">//然后就是led1开</span></span><br><span class="line">&#123;</span><br><span class="line">	GPIO_ResetBits(GPIOA, GPIO_Pin_1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED1_OFF</span><span class="params">(<span class="type">void</span>)</span>             <span class="comment">//led1关</span></span><br><span class="line">&#123;</span><br><span class="line">	GPIO_SetBits(GPIOA, GPIO_Pin_1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED1_Turn</span><span class="params">(<span class="type">void</span>)</span>                    <span class="comment">//led取反</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (GPIO_ReadOutputDataBit(GPIOA, GPIO_Pin_1) == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_SetBits(GPIOA, GPIO_Pin_1);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_ResetBits(GPIOA, GPIO_Pin_1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED2_ON</span><span class="params">(<span class="type">void</span>)</span>       下面同理</span><br><span class="line">&#123;</span><br><span class="line">	GPIO_ResetBits(GPIOA, GPIO_Pin_2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED2_OFF</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	GPIO_SetBits(GPIOA, GPIO_Pin_2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED2_Turn</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (GPIO_ReadOutputDataBit(GPIOA, GPIO_Pin_2) == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_SetBits(GPIOA, GPIO_Pin_2);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_ResetBits(GPIOA, GPIO_Pin_2);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>主函数<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> __LED_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> __LED_H</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">LED_Init</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">LED1_ON</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">LED1_OFF</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">LED1_Turn</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">LED2_ON</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">LED2_OFF</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">LED2_Turn</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="按键封装"><a href="#按键封装" class="headerlink" title="按键封装"></a>按键封装</h3><ul>
+<li><strong>输入</strong>函数介绍<ul>
+<li><code>GPIO_ReadInputDataBit;</code>此函数用于&#x3D;&#x3D;读取输入寄存器某一个端口的输入值&#x3D;&#x3D;<ul>
+<li>返回值是高低电平</li>
+</ul>
+</li>
+<li><code>GPIO_ReadInputData</code> 相比较上一个函数少了<em>bit</em>，是用来读取整个&#x3D;&#x3D;输入数据寄存器&#x3D;&#x3D;<ul>
+<li>返回值是<em>uint16_t</em> ，是一个16位的数据，每一位代表一个端口值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>输出</strong>函数介绍<ul>
+<li><code>GPIO_ReadOutputDataBit</code>，用于读取输出寄存器的某一位<ul>
+<li>原则上来说不是用来读取端口的输入数据，一般用于输出模式，来看自己输出的是什么</li>
+</ul>
+</li>
+<li><code>GPIO_ReadOutputData</code>，用于读取整个输出寄存器</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span>                  <span class="comment">// Device header</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Delay.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Key_Init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);         <span class="comment">//注意按键在gpioB的位置</span></span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;          <span class="comment">//input 上拉模式</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_11;          <span class="comment">//我们的按键接在了Pin1 &amp; Pin11 上</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;     <span class="comment">//在输入模式下这个速度没有实际用处</span></span><br><span class="line">	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">uint8_t</span> <span class="title function_">Key_GetNum</span><span class="params">(<span class="type">void</span>)</span>            <span class="comment">//uint8_t = unsigned char </span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">uint8_t</span> KeyNum = <span class="number">0</span>;    <span class="comment">//先初始一个值</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//接下来就是寻找读取gpio端口值的函数</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == <span class="number">0</span>)      <span class="comment">//如果pin1按下</span></span><br><span class="line">	&#123;</span><br><span class="line">		Delay_ms(<span class="number">20</span>);      <span class="comment">//延时消抖</span></span><br><span class="line">		<span class="keyword">while</span> (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == <span class="number">0</span>);      <span class="comment">//如果不松手就一直死循环</span></span><br><span class="line">		Delay_ms(<span class="number">20</span>);      <span class="comment">//松手消抖</span></span><br><span class="line">		KeyNum = <span class="number">1</span>;         <span class="comment">//赋值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11) == <span class="number">0</span>)        <span class="comment">//pin11同理</span></span><br><span class="line">	&#123;</span><br><span class="line">		Delay_ms(<span class="number">20</span>);</span><br><span class="line">		<span class="keyword">while</span> (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11) == <span class="number">0</span>);</span><br><span class="line">		Delay_ms(<span class="number">20</span>);</span><br><span class="line">		KeyNum = <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> KeyNum;    <span class="comment">//最后返回按键按下的键值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h1 id="光敏传感器控制蜂鸣器"><a href="#光敏传感器控制蜂鸣器" class="headerlink" title="光敏传感器控制蜂鸣器"></a>光敏传感器控制蜂鸣器</h1><h2 id="光敏传感器"><a href="#光敏传感器" class="headerlink" title="光敏传感器"></a>光敏传感器</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">LightSensor_Init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);       <span class="comment">//简简单单的初始化</span></span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;          <span class="comment">//上拉输入模式</span></span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;</span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line">	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">uint8_t</span> <span class="title function_">LightSensor_Get</span><span class="params">(<span class="type">void</span>)</span>     </span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_13);          <span class="comment">//直接返回光敏电阻的读取值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="蜂鸣器"><a href="#蜂鸣器" class="headerlink" title="蜂鸣器"></a>蜂鸣器</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Buzzer_Init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);</span><br><span class="line">	</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;</span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;</span><br><span class="line">	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line">	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line">	</span><br><span class="line">	GPIO_SetBits(GPIOB, GPIO_Pin_12);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Buzzer_ON</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	GPIO_ResetBits(GPIOB, GPIO_Pin_12);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Buzzer_OFF</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	GPIO_SetBits(GPIOB, GPIO_Pin_12);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Buzzer_Turn</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (GPIO_ReadOutputDataBit(GPIOB, GPIO_Pin_12) == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_SetBits(GPIOB, GPIO_Pin_12);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		GPIO_ResetBits(GPIOB, GPIO_Pin_12);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>[[04_1_OLED调试工具]]</p>
 
   </div>
   
@@ -2437,10 +2502,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-06T18:49:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-07T22:39:47+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 6, 2023</p>
+    <p>更新于：May 7, 2023</p>
   </a>
 </div>
 
@@ -2449,8 +2514,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>关于博客</p></a></div>
-  <span hidden itemprop="keywords">关于博客</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STM32/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STM32</p></a></div>
+  <span hidden itemprop="keywords">STM32</span>
 
 
         
@@ -2463,7 +2528,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/&title=03_2 GPIO输入 - TAN's Blog&summary="
           
           >
           
@@ -2475,7 +2540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/&title=03_2 GPIO输入 - TAN's Blog&summary="
           
           >
           
@@ -2487,7 +2552,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/03/hello-world/&title=Hello World - TAN's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/&title=03_2 GPIO输入 - TAN's Blog&summary="
           
           >
           
@@ -2520,24 +2585,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/05/06/update1.0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>23.5.6更新</p>
-          <p class='content'>更新内容
-新增小组件
-标签
-分类
-
-
-新增评论系统
-支持github登录
-
-
-大量优化了文章阅读界面
-增加站内搜索系统
-
-</p>
+        <a class='prev' href='/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_1_OLED%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>04_1 OLED测试工具</p>
+          <p class='content'>[[03_2 GPIO输入]]OLED简介
+OLED：有机发光二极管
+OLED显示屏：功耗低，响应速度快，宽视角（因为oled是自发光，在任何角度看都是清晰的，相反lcd只能正面看），轻薄柔韧
+...</p>
         </a>
       
+      
+        <a class='next' href='/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_1%20LED%E8%BE%93%E5%87%BA/'>
+          <p class='title'>03_1 LED输出<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[[02_GPIO介绍]]示意图
+注意：keilkill.bat程序可以删掉中间文件，这样体积就可以大大减小回顾操作顺序：
+
+使用RCC开启GPIO的时钟
+使用GPIO_Init初始化GPIO
+...</p>
+        </a>
       
     </div>
   
@@ -2552,7 +2617,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/05/03/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2678,7 +2743,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#03-1-LED%E8%BE%93%E5%87%BA"><span class="toc-text">[[03_1 LED输出]]</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E9%94%AE%E4%BB%8B%E7%BB%8D"><span class="toc-text">按键介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D"><span class="toc-text">传感器模块介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%80%BC%E5%8C%96%E6%A8%A1%E5%9D%97%EF%BC%88LM393%EF%BC%89"><span class="toc-text">二值化模块（LM393）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%A2%E5%A4%96%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="toc-text">红外传感器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF"><span class="toc-text">硬件电路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E9%94%AE%E7%9A%84%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF"><span class="toc-text">按键的硬件电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%9B%B4%E6%8E%A5%E4%B8%8EGND%E7%9B%B8%E8%BF%9E"><span class="toc-text">一、直接与GND相连</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%96%E9%83%A8%E6%8E%A5%E4%B8%8A%E6%8B%89%E7%94%B5%E9%98%BB"><span class="toc-text">二、外部接上拉电阻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%8A%E6%8E%A5%E6%8E%A5%E6%B3%95"><span class="toc-text">三、上接接法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%89%E9%94%AE%E6%8E%A7%E5%88%B6LED"><span class="toc-text">按键控制LED</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E5%BA%93%E5%87%BD%E6%95%B0"><span class="toc-text">封装库函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#led-c%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">led.c的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E9%94%AE%E5%B0%81%E8%A3%85"><span class="toc-text">按键封装</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%89%E6%95%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E6%8E%A7%E5%88%B6%E8%9C%82%E9%B8%A3%E5%99%A8"><span class="toc-text">光敏传感器控制蜂鸣器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E6%95%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="toc-text">光敏传感器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9C%82%E9%B8%A3%E5%99%A8"><span class="toc-text">蜂鸣器</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3240,7 +3305,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/代码/","name":"代码"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/03/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/03/hello-world/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/03/hello-world/","wordCount":0,"datePublished":"2023-05-03T07:18:32.845Z","dateModified":"2023-05-06T10:49:57.351Z","articleSection":"代码","keywords":"关于博客","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/01-GPIO基本用法/03_2 GPIO输入/","name":"03_2 GPIO输入"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"03_2 GPIO输入","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/","wordCount":0,"datePublished":"2023-05-07T14:47:18.558Z","dateModified":"2023-05-07T14:39:47.301Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

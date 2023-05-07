@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683374374281),
+    lastupdate: new Date(1683470930875),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc","category","tagcloud","text"],
@@ -2328,6 +2328,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
     
     
@@ -2335,7 +2351,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/06/update1.0/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2353,28 +2369,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/06/update1.0/"  itemprop="url">
-        23.5.6更新
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/"  itemprop="url">
+        6-4TIM输出比较
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        更新内容
-新增小组件
-标签
-分类
+        [[6-3定时器外部时钟]]输出比较简介
+OC（Output Compare）输出比较
+IC（Input Capture）输入捕获
+CC（Capture&#x2F;Compare）输入捕获和输出比较的单元
 
 
-新增评论系统
-支持github登录
-
-
-大量优化了文章阅读界面
-增加站内搜索系统
-
-
+输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形
+CCR是捕获和比较共用的...
       
     
   </div>
@@ -2382,20 +2392,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-05-06T00:00:00+08:00">2023-05-06</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9B%B4%E6%96%B0/">更新</a>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9B%B4%E6%96%B0/" itemprop="url"><span itemprop="name">更新</span></a>
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/05/06/update1.0/' itemprop="url">
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2411,7 +2421,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-3定时器外部时钟/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
   </span>
@@ -2429,16 +2439,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/03/hello-world/"  itemprop="url">
-        Hello World
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/"  itemprop="url">
+        6-3 定时器外部时钟
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        [[6-2 定时器定时中断]]
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include &quot;stm32f10x.h&quot;                  // D...
       
     
   </div>
@@ -2446,20 +2456,580 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-05-03T15:18:32+08:00">2023-05-03</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url"><span itemprop="name">代码</span></a>
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/05/03/hello-world/' itemprop="url">
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-2 定时器定时中断/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/"  itemprop="url">
+        6-2 定时器定时中断
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[6-1_TIM定时中断]]定时器中断新建的Timer.c  &amp;  Timer.h文件在System文件夹下
+
+RCC开启时钟
+选择时基单元的时钟源，对于定时中断，我们就选择内部时钟源
+配置时基单元，包括预分频器、自动重装器、计数模式
+配置输出中断控制，阴虚更新中断到NVIC
+配置NVIC，在NVIC中打开定时器中断的通道，并分配一个优先级
+运行控制
+整个模块配置完成后，我们还需要...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-1_TIM定时中断/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-1_TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/"  itemprop="url">
+        6-1 TIM定时器中断
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[05_3 旋转编码器]]简介TIM定时器
+
+定时器可以对输入的时钟进行&#x3D;&#x3D;计数&#x3D;&#x3D;，并在计数值达到设定值时&#x3D;&#x3D;触发中断
+16计数器、预分频器、自动重装器的时基单元，在72MHz计数时钟下可以实现最大59.65s的定时
+计数器：用于执行计数定时的寄存器，每来一个时钟，计数器+1
+预分频器：可以对计数器的时钟进行分频，让计数更灵活
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-1_TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_3 旋转编码器/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_3%20%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8/"  itemprop="url">
+        05_3 旋转编码器
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[05_2 红外对射式传感器计次]]细节问题由于旋转编码器会存在两条相位差为90°波形图，所以会在中断触发上存在问题![[5-1旋转编码器#^2ad2e9]]
+
+最终的解决办法是：
+
+在a波形是低电平的时候，触发中断，同时b电平是下降沿的时候判断为是正转
+反转同理：a是下降沿，b是低电平
+
+
+代码12345678910111213141516171819202122232425262728...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_3%20%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_2 红外对射式传感器计次/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/"  itemprop="url">
+        05_2 红外对射式传感器计次
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[04_2_keil调试工具]]红外对射式传感器接线图
+1.配置中断配置中断的流程从GPIO一直到NVIC这一路中出现的外设模块都配置好
+
+配置RCC，将涉及到的外设时钟都打开
+配置GPIO，选择端口为输入模式
+配置AFIO，选择这一路的GPIO，连接到后面的EXTI
+配置EXTI，选择边沿触发方式（上升下降双边）、触发响应方式（中断响应或事件响应）
+配置NVIC，外部中断信号就能进入CP...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_1 EXTI外部中断/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/"  itemprop="url">
+        05_1 EXTI外部中断
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[04_2_keil调试工具]]中断系统
+中断：在主程序运行过程中，出现了特定的中断触发条件（中断源），使得CPU暂停当前正在运行的程序，转而取处理中断程序，处理完成后又返回原来被暂停的位置继续运行
+中断优先级：当有多个中断源同时申请中断,CPU 会根据中断源的轻重缓急进行裁决，优先响应更加紧急的中断源
+中断嵌套：当一个中断程序正在运行时，又有新的更高的优先级的中断源申请中断，CPU再次暂...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/02-调参工具/04_2_keil调试工具/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_2_keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/"  itemprop="url">
+        04_2 keil调试工具
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[04_1_OLED调试工具]] Keil调试
+Debug设置
+设置界面
+左边是仿真模拟器调试，右边是硬件调试，我们选择硬件调试
+选择右上角放大镜，进入调试模式
+
+调试界面介绍
+
+从左到右依次是：&#x3D;&#x3D;单步运行&#x3D;&#x3D;、&#x3D;&#x3D;跳过当前单步运行&#x3D;&#x3D;、&#x3D;&#x3D;跳出当前函数单步运行&#x3D;&#x3D;、&...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_2_keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/02-调参工具/04_1_OLED调试工具/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_1_OLED%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/"  itemprop="url">
+        04_1 OLED测试工具
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[03_2 GPIO输入]]OLED简介
+OLED：有机发光二极管
+OLED显示屏：功耗低，响应速度快，宽视角（因为oled是自发光，在任何角度看都是清晰的，相反lcd只能正面看），轻薄柔韧
+供电：3~5.5V。通信协议：I2C&#x2F;SPI，分辨率：128*64
+
+调试方式
+串口调试：通过串口通信，将调试信息发送到电脑端，电脑使用串口助手显示调试信息
+显示屏调试：直接将显示器连接到单...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_1_OLED%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/01-GPIO基本用法/03_2 GPIO输入/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/"  itemprop="url">
+        03_2 GPIO输入
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[03_1 LED输出]]按键介绍
+按键:常见的输入设备，按下导通，松手断开
+按键会存在抖动
+
+
+
+传感器模块介绍
+传感器：光敏电阻&#x2F;热敏电阻&#x2F;红外接收管
+传感器的元件的电阻会随着外界的模拟量的变化而变化，通过与定值电阻分压即可得到模拟电压输出，再通过电压比较器进行二值化即可得到数字电压输出
+注意这其中一个传感器，N1为传感器电阻本身，上面的R1是用来和传感器电阻进行分...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2475,6 +3045,21 @@ Qu...
     
   </section>
   
+    
+      <br>
+      <div class="prev-next">
+        
+        <p class="current">
+          1 / 2
+        </p>
+        
+          <a class="next" rel="next" href="/archives/2023/page/2/">
+            <section class="post next white-box shadow floatable blur">
+              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
+        
+      </div>
     
   
 
@@ -2574,6 +3159,11 @@ Qu...
       <ul class="entry navigation">
         
           <li><a class="flat-box"
+            title="/categories/STM32%E5%AD%A6%E4%B9%A0/" href="/categories/STM32%E5%AD%A6%E4%B9%A0/"
+            active-action="action-categoriesSTM32E5ADA6E4B9A0"
+            ><div class='name'>STM32学习</div><div class='badge'>(11)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/%E4%BB%A3%E7%A0%81/" href="/categories/%E4%BB%A3%E7%A0%81/"
             active-action="action-categoriesE4BBA3E7A081"
             ><div class='name'>代码</div><div class='badge'>(1)</div></a></li>
@@ -2606,7 +3196,7 @@ Qu...
 
 
     <div class='content'>
-      <a href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" style="font-size: 14px; color: #999">关于博客</a>
+      <a href="/tags/STM32/" style="font-size: 24px; color: #555">STM32</a> <a href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" style="font-size: 14px; color: #999">关于博客</a>
     </div>
   </section>
 
