@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.10">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2023/05/"/>
+  
+  <link rel="canonical" href="http://example.com/2023/05/10/02-openmv图像处理方法/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,18 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2023/5 - TAN's Blog</title>
-  <meta name="keywords" content="null">
+  <title>OMV图像处理方法 - TAN's Blog</title>
+  <meta name="keywords" content="Openmv,null">
   <meta desc name="description" content="this is TAN7 blog - TAN7 - TAN's Blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="TAN&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/2023/05/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OMV图像处理方法">
+<meta property="og:url" content="http://example.com/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="this is TAN7 blog">
+<meta property="og:description" content="openmv文档官方学习文档[[01-图像处理入门]]感光元件sensor模块，用于设置感光元件的参数 1234567891011import sensor#引入感光元件的模块# 设置摄像头sensor.reset()#初始化感光元件sensor.set_pixformat(sensor.RGB565)#设置为彩色sensor.set_framesize(sensor.QVGA)#设置图像的大小s">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-05-10T11:35:55.280Z">
+<meta property="article:modified_time" content="2023-05-10T13:59:41.800Z">
 <meta property="article:author" content="TAN7">
+<meta property="article:tag" content="Openmv">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2048,7 +2051,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2247,7 +2250,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC0285.jpg"></div>
 
@@ -2318,39 +2321,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/10/02-Openmv图像处理方法/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
@@ -2360,700 +2331,322 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="this is TAN7 blog">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         OMV图像处理方法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC1273.jpg" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC1273.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">TAN</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Openmv%E5%AD%A6%E4%B9%A0/">Openmv学习</a>
     
-      
-        openmv文档官方学习文档[[01-图像处理入门]]感光元件sensor模块，用于设置感光元件的参数
-1234567891011import sensor#引入感光元件的模块# 设置摄像头sensor.reset()#初始化感光元件sensor.set_pixformat(sensor.RGB565)#设置为彩色sensor.set_framesize(sensor.QVGA)#设置图像的...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Openmv%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">Openmv学习</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-10T19:35:55+08:00">2023-05-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Openmv%E5%AD%A6%E4%B9%A0/">Openmv学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Openmv%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">Openmv学习</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-10T19:35:55+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：May 10, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="openmv文档"><a href="#openmv文档" class="headerlink" title="openmv文档"></a><a target="_blank" rel="noopener" href="https://docs.singtown.com/micropython/zh/latest/openmvcam/index.html">openmv文档</a></h1><h1 id="官方学习文档"><a href="#官方学习文档" class="headerlink" title="官方学习文档"></a><a target="_blank" rel="noopener" href="https://book.openmv.cc/">官方学习文档</a></h1><h1 id="01-图像处理入门"><a href="#01-图像处理入门" class="headerlink" title="[[01-图像处理入门]]"></a>[[01-图像处理入门]]</h1><h1 id="感光元件"><a href="#感光元件" class="headerlink" title="感光元件"></a>感光元件</h1><p><strong>sensor</strong>模块，用于设置感光元件的参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sensor<span class="comment">#引入感光元件的模块</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置摄像头</span></span><br><span class="line">sensor.reset()<span class="comment">#初始化感光元件</span></span><br><span class="line">sensor.set_pixformat(sensor.RGB565)<span class="comment">#设置为彩色</span></span><br><span class="line">sensor.set_framesize(sensor.QVGA)<span class="comment">#设置图像的大小</span></span><br><span class="line">sensor.skip_frames()<span class="comment">#跳过n张照片，在更改设置后，跳过一些帧，等待感光元件变稳定。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 一直拍照</span></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    img = sensor.snapshot()<span class="comment">#拍摄一张照片，img为一个image对象</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p><code>sensor.reset()</code>初始化感光元件</p>
+<h2 id="设置彩色-x2F-黑白"><a href="#设置彩色-x2F-黑白" class="headerlink" title="设置彩色&#x2F;黑白"></a>设置彩色&#x2F;黑白</h2><p><code>sensor.set_pixforma()</code>设置像素模式</p>
+<h2 id="设置彩色／黑白"><a href="#设置彩色／黑白" class="headerlink" title="设置彩色／黑白"></a>设置彩色／黑白</h2><ul>
+<li>sensor.set_pixformat() 设置像素模式。<ul>
+<li>sensor.GRAYSCALE: 灰度，每个像素8bit。</li>
+<li>sensor.RGB565: 彩色，每个像素16bit。</li>
+</ul>
+</li>
+</ul>
+<h2 id="设置图像大小"><a href="#设置图像大小" class="headerlink" title="设置图像大小"></a>设置图像大小</h2><ul>
+<li>sensor.set_framesize() 设置图像的大小<ul>
+<li>sensor.QQCIF: 88x72</li>
+<li>sensor.QCIF: 176x144</li>
+<li>sensor.CIF: 352x288</li>
+<li>sensor.QQSIF: 88x60</li>
+<li>sensor.QSIF: 176x120</li>
+<li>sensor.SIF: 352x240</li>
+<li>sensor.QQQQVGA: 40x30</li>
+<li>sensor.QQQVGA: 80x60</li>
+<li>sensor.QQVGA: 160x120   </li>
+<li>sensor.QVGA: 320x240</li>
+<li>sensor.VGA: 640x480</li>
+<li>sensor.HQQQVGA: 80x40</li>
+<li>sensor.HQQVGA: 160x80</li>
+<li>sensor.HQVGA: 240x160</li>
+<li>sensor.B64X32: 64x32 (用于帧差异 image.find_displacement())</li>
+<li>sensor.B64X64: 64x64 用于帧差异 image.find_displacement())</li>
+<li>sensor.B128X64: 128x64 (用于帧差异 image.find_displacement())</li>
+<li>sensor.B128X128: 128x128 (用于帧差异 image.find_displacement())</li>
+</ul>
+</li>
+</ul>
+<h2 id="跳过一些帧"><a href="#跳过一些帧" class="headerlink" title="跳过一些帧"></a>跳过一些帧</h2><ul>
+<li>sensor.skip_frames(n&#x3D;10) 跳过n张照片，在更改设置后，跳过一些帧，等待感光元件变稳定。</li>
+</ul>
+<h2 id="获取一张图像"><a href="#获取一张图像" class="headerlink" title="获取一张图像"></a>获取一张图像</h2><ul>
+<li>sensor.snapshot() 拍摄一张照片，返回一个image对象。</li>
+</ul>
+<h2 id="自动增益／白平衡／曝光"><a href="#自动增益／白平衡／曝光" class="headerlink" title="自动增益／白平衡／曝光"></a>自动增益／白平衡／曝光</h2><ul>
+<li>sensor.set_auto_gain() 自动增益开启（True）或者关闭（False）。在使用颜色追踪时，需要关闭自动增益。</li>
+<li>sensor.set_auto_whitebal() 自动白平衡开启（True）或者关闭（False）。在使用颜色追踪时，需要关闭自动白平衡。</li>
+<li>&#96;sensor.set_auto_exposure(enable[, exposure_us])<ul>
+<li>enable 打开（True）或关闭（False）自动曝光。默认打开。</li>
+<li>如果 enable 为False， 则可以用 exposure_us 设置一个固定的曝光时间（以微秒为单位）。?怎么设置</li>
+</ul>
+</li>
+</ul>
+<h2 id="设置窗口ROI"><a href="#设置窗口ROI" class="headerlink" title="设置窗口ROI"></a>设置窗口ROI</h2><p>sensor.set_windowing(roi)<br>ROI：Region Of Interest，图像处理中的术语“感兴趣区”。就是在要处理的图像中提取出的要处理的区域。<br><img src="https://book.openmv.cc/assets/05-01-001.png" class="lazyload" data-srcset="https://book.openmv.cc/assets/05-01-001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sensor.set_framesize(sensor.VGA) <span class="comment"># 高分辨率</span></span><br><span class="line">sensor.set_windowing((<span class="number">640</span>, <span class="number">80</span>)) <span class="comment">#取中间的640*80区域</span></span><br></pre></td></tr></table></figure>
+
+<p>roi的格式是(x, y, w, h)</p>
+<h3 id="ROI感兴趣的区域"><a href="#ROI感兴趣的区域" class="headerlink" title="ROI感兴趣的区域"></a>ROI感兴趣的区域</h3><p><img src="https://book.openmv.cc/assets/05-03-001.jpg" class="lazyload" data-srcset="https://book.openmv.cc/assets/05-03-001.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>roi的格式是(x, y, w, h)的tupple(元组).</p>
+<ul>
+<li>x:ROI区域中左上角的x坐标</li>
+<li>y:ROI区域中左上角的y坐标</li>
+<li>w:ROI的宽度</li>
+<li>h:ROI的高度</li>
+</ul>
+<h3 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image.get_statistics(roi=Auto)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Statics函数"><a href="#Statics函数" class="headerlink" title="Statics函数"></a>Statics函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image.get_statistics([_thresholds_[, _invert=False_[, _roi_[, _bins_[, _l_bins_[, _a_bins_[, _b_bins_[, _difference_]]]]]]]])</span><br></pre></td></tr></table></figure>
+<p>计算 <code>roi</code> 中每个颜色通道的平均值、中值、众值、标准偏差、最小值、最大值、下四分值和上四分值，并返回一个数据对象。 请参见 <code>statistics</code> 对象以获取更多信息。您也可以使用 <code>image.get_stats</code> 或 <code>image.statistics</code> 来调用这一方法。 如果传递 <code>thresholds</code> 列表，则直方图信息将仅从阈值列表中的像素计算得出。</p>
+<p><code>thresholds</code> 必须是元组列表。 <code>[(lo, hi), (lo, hi), ..., (lo, hi)]</code> 定义你想追踪的颜色范围。 对于灰度图像，每个元组需要包含两个值 - 最小灰度值和最大灰度值。 仅考虑落在这些阈值之间的像素区域。 对于RGB565图像，每个元组需要有六个值(l_lo，l_hi，a_lo，a_hi，b_lo，b_hi) - 分别是LAB L，A和B通道的最小值和最大值。 为方便使用，此功能将自动修复交换的最小值和最大值。 此外，如果元组大于六个值，则忽略其余值。相反，如果元组太短，则假定其余阈值处于最大范围。</p>
+<blockquote>
+<p>获取所跟踪对象的阈值，只需在IDE帧缓冲区中选择（单击并拖动）跟踪对象。 直方图会相应地更新到所在区域。然后只需写下颜色分布在每个直方图通道中起始与下降位置。 这些将是 <code>thresholds</code> 的低值和高值。 由于上下四分位数据相差微小，故手动确定阈值为佳。<br>您还可以通过进入OpenMV IDE中的 <code>工具 -&gt;机器视觉 -&gt;阈值编辑器</code> 并从GUI窗口中拖动滑块来确定颜色阈值。</p>
+</blockquote>
+<p><code>invert</code> 反转阈值操作，像素在已知颜色范围之外进行匹配，而非在已知颜色范围内。</p>
+<p>您可以在需要获取图像中一个像素区域信息时使用这一方法。例如：若您想用帧差法来检测运动时， 您需要使用这一方法来确定图像颜色通道的变化，从而触发运动检测阈值。</p>
+<blockquote>
+<p><code>roi</code> 是感兴趣区域的矩形元组(x，y，w，h)。如果未指定，ROI即整个图像的图像矩形。</p>
+</blockquote>
+<p>操作范围仅限于 <code>roi</code> 区域内的像素。<br><code>bins</code> 和其他bin是用于直方图通道的箱数。对于灰度图像，使用 <code>bins</code> ， 对于RGB565图像，使用其他每个通道。每个通道的bin计数必须大于2。 另外，将bin计数设置为大于每个通道的唯一像素值的数量是没有意义的。 默认情况下，直方图将具有每个通道的最大bin数。<br>不支持压缩图像和bayer图像<br>其中roi是目标区域。注意，这里的roi，bins之类的参数，一定要<strong>显式</strong>地标明，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img.get_statistics(roi=(<span class="number">0</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">20</span>))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果是 img.get_statistics((0,0,10,20))，ROI不会起作用。</p>
+</blockquote>
+<ul>
+<li>statistics.mean() 返回灰度的**平均数(0-255) (int)。你也可以通过statistics[0]获得。</li>
+<li>statistics.median() 返回灰度的<strong>中位数</strong>。你也可以通过statistics[1]获得。</li>
+<li>statistics.mode() 返回灰度的<strong>众数</strong>。你也可以通过statistics[2]获得。</li>
+<li>statistics.stdev() 返回灰度的<strong>标准差</strong>。你也可以通过statistics[3]获得。</li>
+<li>statistics.min() 返回灰度的<strong>最小值</strong>。你也可以通过statistics[4]获得。</li>
+<li>statistics.max() 返回灰度的<strong>最大值</strong>。你也可以通过statistics[5]获得。</li>
+<li>statistics.lq() 返回灰度的<strong>第一四分数</strong>。你也可以通过statistics[6]获得。</li>
+<li>statistics.uq() 返回灰度的<strong>第三四分数</strong>。你也可以通过statistics[7]获得。</li>
+</ul>
+<p>上面的是灰度的值，接下来的</p>
+<ul>
+<li>l_mean，l_median，l_mode，l_stdev，l_min，l_max，l_lq，l_uq，</li>
+<li>a_mean，a_median，a_mode，a_stdev，a_min，a_max，a_lq，a_uq，</li>
+<li>b_mean，b_median，b_mode，b_stdev，b_min，b_max，b_lq，b_uq，</li>
+</ul>
+<p>是LAB三个通道的平均数，中位数，众数，标准差，最小值，最大值，第一四分数，第三四分数。</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><blockquote>
+<p>检测左上方的区域中的颜色值。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sensor, image, time      <span class="comment"># 导入模块（库）</span></span><br><span class="line"></span><br><span class="line">sensor.reset() <span class="comment"># 初始化摄像头</span></span><br><span class="line">sensor.set_pixformat(sensor.RGB565) <span class="comment"># 格式为 RGB565.   固定格式</span></span><br><span class="line">sensor.set_framesize(sensor.QVGA)   <span class="comment">#设置帧大小压缩了画质</span></span><br><span class="line">sensor.skip_frames(<span class="number">10</span>) <span class="comment"># 跳过10帧，使新设置生效</span></span><br><span class="line">sensor.set_auto_whitebal(<span class="literal">False</span>)               <span class="comment"># 自动白平衡</span></span><br><span class="line"><span class="comment"># 在颜色追踪的时候关闭自动白平衡</span></span><br><span class="line"></span><br><span class="line">ROI=(<span class="number">80</span>,<span class="number">30</span>,<span class="number">15</span>,<span class="number">15</span>)   <span class="comment">#设置ROI的感兴趣区，(x,y,x_width,y_heigth)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    img = sensor.snapshot()         <span class="comment"># 拍一张照片，然后返回这个照片 snapshot-</span></span><br><span class="line">    statistics=img.get_statistics(roi=ROI)  </span><br><span class="line">    color_l=statistics.l_mode()    <span class="comment"># L是亮度</span></span><br><span class="line">    color_a=statistics.a_mode()    <span class="comment"># a是正数是红色，负数是绿色</span></span><br><span class="line">    color_b=statistics.b_mode()    <span class="comment"># b是正数是黄色，负数是蓝色</span></span><br><span class="line">    <span class="built_in">print</span>(color_l,color_a,color_b)   <span class="comment"># 在串口打印</span></span><br><span class="line">    img.draw_rectangle(ROI)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://book.openmv.cc/assets/05-03-002.jpg" class="lazyload" data-srcset="https://book.openmv.cc/assets/05-03-002.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>终端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">56 66 51</span><br><span class="line">56 66 55</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 55</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br><span class="line">56 66 51</span><br></pre></td></tr></table></figure>
+<h2 id="设置翻转"><a href="#设置翻转" class="headerlink" title="设置翻转"></a>设置翻转</h2><p>sensor.set_hmirror(True)<br>水平方向翻转</p>
+<p>sensor.set_vflip(True)<br>垂直方向翻转</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-10T21:59:41+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：May 10, 2023</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/09/01-图像处理入门/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Openmv/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Openmv</p></a></div>
+  <span hidden itemprop="keywords">Openmv</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/&title=OMV图像处理方法 - TAN's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/&title=OMV图像处理方法 - TAN's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/&title=OMV图像处理方法 - TAN's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/05/09/01-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8/'>
+          <p class='title'>图像处理入门<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[[23.5.9]]LAB亮度-对比度Lab颜色空间中，L亮度；a的正数代表红色，负端代表绿色；b的正数代表黄色，负端代表兰色。不像RGB和CMYK色彩空间，Lab颜色被设计来接近人类视觉。因此...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/09/01-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8/"  itemprop="url">
-        图像处理入门
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[23.5.9]]LAB亮度-对比度Lab颜色空间中，L亮度；a的正数代表红色，负端代表绿色；b的正数代表黄色，负端代表兰色。不像RGB和CMYK色彩空间，Lab颜色被设计来接近人类视觉。因此L分量可以调整亮度对，修改a和b分量的输出色阶来做精确的颜色平衡。
 
-注意：在OpenMV的查找色块的算法中，运用的就是这个LAB模式！
+    <div id="layoutHelper-comments"></div>
 
-光源的选择如果你的机器是在工业上，或者24小时长时间运行的设...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-09T23:25:15+08:00">2023-05-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Openmv%E5%AD%A6%E4%B9%A0/">Openmv学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Openmv%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">Openmv学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/09/01-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/"  itemprop="url">
-        6-4TIM输出比较
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[6-3定时器外部时钟]]输出比较简介
-OC（Output Compare）输出比较
-IC（Input Capture）输入捕获
-CC（Capture&#x2F;Compare）输入捕获和输出比较的单元
+  </article>
 
 
-输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形
-CCR是捕获和比较共用的...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-3定时器外部时钟/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/"  itemprop="url">
-        6-3 定时器外部时钟
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[6-2 定时器定时中断]]
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include &quot;stm32f10x.h&quot;                  // D...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-2 定时器定时中断/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/"  itemprop="url">
-        6-2 定时器定时中断
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[6-1_TIM定时中断]]定时器中断新建的Timer.c  &amp;  Timer.h文件在System文件夹下
-
-RCC开启时钟
-选择时基单元的时钟源，对于定时中断，我们就选择内部时钟源
-配置时基单元，包括预分频器、自动重装器、计数模式
-配置输出中断控制，阴虚更新中断到NVIC
-配置NVIC，在NVIC中打开定时器中断的通道，并分配一个优先级
-运行控制
-整个模块配置完成后，我们还需要...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-2%20%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-1_TIM定时中断/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-1_TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/"  itemprop="url">
-        6-1 TIM定时器中断
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[05_3 旋转编码器]]简介TIM定时器
-
-定时器可以对输入的时钟进行&#x3D;&#x3D;计数&#x3D;&#x3D;，并在计数值达到设定值时&#x3D;&#x3D;触发中断
-16计数器、预分频器、自动重装器的时基单元，在72MHz计数时钟下可以实现最大59.65s的定时
-计数器：用于执行计数定时的寄存器，每来一个时钟，计数器+1
-预分频器：可以对计数器的时钟进行分频，让计数更灵活
-...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-1_TIM%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_3 旋转编码器/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_3%20%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8/"  itemprop="url">
-        05_3 旋转编码器
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[05_2 红外对射式传感器计次]]细节问题由于旋转编码器会存在两条相位差为90°波形图，所以会在中断触发上存在问题![[5-1旋转编码器#^2ad2e9]]
-
-最终的解决办法是：
-
-在a波形是低电平的时候，触发中断，同时b电平是下降沿的时候判断为是正转
-反转同理：a是下降沿，b是低电平
 
 
-代码12345678910111213141516171819202122232425262728...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_3%20%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_2 红外对射式传感器计次/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/"  itemprop="url">
-        05_2 红外对射式传感器计次
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[04_2_keil调试工具]]红外对射式传感器接线图
-1.配置中断配置中断的流程从GPIO一直到NVIC这一路中出现的外设模块都配置好
-
-配置RCC，将涉及到的外设时钟都打开
-配置GPIO，选择端口为输入模式
-配置AFIO，选择这一路的GPIO，连接到后面的EXTI
-配置EXTI，选择边沿触发方式（上升下降双边）、触发响应方式（中断响应或事件响应）
-配置NVIC，外部中断信号就能进入CP...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_2%20%E7%BA%A2%E5%A4%96%E5%AF%B9%E5%B0%84%E5%BC%8F%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AE%A1%E6%AC%A1/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/03-中断/05_1 EXTI外部中断/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/"  itemprop="url">
-        05_1 EXTI外部中断
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[04_2_keil调试工具]]中断系统
-中断：在主程序运行过程中，出现了特定的中断触发条件（中断源），使得CPU暂停当前正在运行的程序，转而取处理中断程序，处理完成后又返回原来被暂停的位置继续运行
-中断优先级：当有多个中断源同时申请中断,CPU 会根据中断源的轻重缓急进行裁决，优先响应更加紧急的中断源
-中断嵌套：当一个中断程序正在运行时，又有新的更高的优先级的中断源申请中断，CPU再次暂...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/03-%E4%B8%AD%E6%96%AD/05_1%20EXTI%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/02-调参工具/04_2_keil调试工具/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_2_keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/"  itemprop="url">
-        04_2 keil调试工具
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[04_1_OLED调试工具]] Keil调试
-Debug设置
-设置界面
-左边是仿真模拟器调试，右边是硬件调试，我们选择硬件调试
-选择右上角放大镜，进入调试模式
-
-调试界面介绍
-
-从左到右依次是：&#x3D;&#x3D;单步运行&#x3D;&#x3D;、&#x3D;&#x3D;跳过当前单步运行&#x3D;&#x3D;、&#x3D;&#x3D;跳出当前函数单步运行&#x3D;&#x3D;、&...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/02-%E8%B0%83%E5%8F%82%E5%B7%A5%E5%85%B7/04_2_keil%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2023/05/page/2/">
-            <section class="post next white-box shadow floatable blur">
-              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
-	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3062,71 +2655,6 @@ Debug设置
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/_DSC1273.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Keyboard Beyond Memories</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">TAN's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1240973173@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
     
   
 
@@ -3222,10 +2750,34 @@ Debug设置
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#openmv%E6%96%87%E6%A1%A3"><span class="toc-text">openmv文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3"><span class="toc-text">官方学习文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#01-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8"><span class="toc-text">[[01-图像处理入门]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%84%9F%E5%85%89%E5%85%83%E4%BB%B6"><span class="toc-text">感光元件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%BD%A9%E8%89%B2-x2F-%E9%BB%91%E7%99%BD"><span class="toc-text">设置彩色&#x2F;黑白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%BD%A9%E8%89%B2%EF%BC%8F%E9%BB%91%E7%99%BD"><span class="toc-text">设置彩色／黑白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%83%8F%E5%A4%A7%E5%B0%8F"><span class="toc-text">设置图像大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%B3%E8%BF%87%E4%B8%80%E4%BA%9B%E5%B8%A7"><span class="toc-text">跳过一些帧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%B8%80%E5%BC%A0%E5%9B%BE%E5%83%8F"><span class="toc-text">获取一张图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%A2%9E%E7%9B%8A%EF%BC%8F%E7%99%BD%E5%B9%B3%E8%A1%A1%EF%BC%8F%E6%9B%9D%E5%85%89"><span class="toc-text">自动增益／白平衡／曝光</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%AA%97%E5%8F%A3ROI"><span class="toc-text">设置窗口ROI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ROI%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E5%8C%BA%E5%9F%9F"><span class="toc-text">ROI感兴趣的区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Statistics"><span class="toc-text">Statistics</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Statics%E5%87%BD%E6%95%B0"><span class="toc-text">Statics函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B"><span class="toc-text">举例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%BF%BB%E8%BD%AC"><span class="toc-text">设置翻转</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3253,13 +2805,14 @@ Debug设置
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3268,14 +2821,14 @@ Debug设置
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3773,7 +3326,7 @@ Debug设置
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2023/","name":"2023"}},{"@type":"ListItem","position":4,"item":{"@id":"http://example.com/archives/2023/5/","name":"5"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Openmv学习/","name":"Openmv学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/10/02-Openmv图像处理方法/","name":"OMV图像处理方法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"OMV图像处理方法","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/10/02-Openmv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/","wordCount":0,"datePublished":"2023-05-10T11:35:55.280Z","dateModified":"2023-05-10T13:59:41.800Z","articleSection":"Openmv学习","keywords":"Openmv","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
