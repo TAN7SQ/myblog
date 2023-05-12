@@ -39,11 +39,11 @@
 <meta property="og:title" content="6-4TIM输出比较">
 <meta property="og:url" content="http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/index.html">
 <meta property="og:site_name" content="TAN&#39;s Blog">
-<meta property="og:description" content="[[6-3定时器外部时钟]]输出比较简介 OC（Output Compare）输出比较 IC（Input Capture）输入捕获 CC（Capture&#x2F;Compare）输入捕获和输出比较的单元   输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形 CCR是捕获和比较共用的，当使">
+<meta property="og:description" content="[6-3定时器外部时钟输出比较简介 OC（Output Compare）输出比较 IC（Input Capture）输入捕获 CC（Capture&#x2F;Compare）输入捕获和输出比较的单元   输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形 CCR是捕获和比较共用的，当使用输入">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-05-07T14:47:18.644Z">
-<meta property="article:modified_time" content="2023-05-12T11:25:27.419Z">
+<meta property="article:modified_time" content="2023-05-12T13:53:40.360Z">
 <meta property="article:author" content="TAN7">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683899202255),
+    lastupdate: new Date(1683899672340),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc","category","tagcloud","text"],
@@ -2400,7 +2400,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="6-3定时器外部时钟"><a href="#6-3定时器外部时钟" class="headerlink" title="[[6-3定时器外部时钟]]"></a>[[6-3定时器外部时钟]]</h1><h1 id="输出比较简介"><a href="#输出比较简介" class="headerlink" title="输出比较简介"></a>输出比较简介</h1><ul>
+    <h1 id="6-3定时器外部时钟"><a href="#6-3定时器外部时钟" class="headerlink" title="[6-3定时器外部时钟"></a>[<a target="_blank" rel="noopener" href="https://www.tan7.ltd/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/">6-3定时器外部时钟</a></h1><h1 id="输出比较简介"><a href="#输出比较简介" class="headerlink" title="输出比较简介"></a>输出比较简介</h1><ul>
 <li>OC（Output Compare）输出比较<ul>
 <li>IC（Input Capture）输入捕获</li>
 <li>CC（Capture&#x2F;Compare）输入捕获和输出比较的单元</li>
@@ -2495,7 +2495,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-12T19:25:27+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-12T21:53:40+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 12, 2023</p>
@@ -2580,14 +2580,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2023/05/09/01-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>图像处理入门</p>
-          <p class='content'>[[23.5.9]]LAB亮度-对比度Lab颜色空间中，L亮度；a的正数代表红色，负端代表绿色；b的正数代表黄色，负端代表兰色。不像RGB和CMYK色彩空间，Lab颜色被设计来接近人类视觉。因此...</p>
+          <p class='content'>[[23.5.9]LAB亮度-对比度Lab颜色空间中，L亮度；a的正数代表红色，负端代表绿色；b的正数代表黄色，负端代表兰色。不像RGB和CMYK色彩空间，Lab颜色被设计来接近人类视觉。因此L...</p>
         </a>
       
       
         <a class='next' href='/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F/'>
           <p class='title'>6-3 定时器外部时钟<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>[[6-2 定时器定时中断]]
-123456789101112131415161718192021222324252627282930313233343536373839404142434445...</p>
+          <p class='content'>6-2 定时器定时中断
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647...</p>
         </a>
       
     </div>
@@ -2734,7 +2734,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F"><span class="toc-text">[[6-3定时器外部时钟]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E7%AE%80%E4%BB%8B"><span class="toc-text">输出比较简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E6%A8%A1%E5%BC%8F"><span class="toc-text">输出比较模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PWM-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-text">PWM 基本结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%88%B5%E6%9C%BA"><span class="toc-text">舵机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA%E5%8F%8A%E5%85%B6%E9%A9%B1%E5%8A%A8"><span class="toc-text">直流电机及其驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF"><span class="toc-text">硬件电路</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F"><span class="toc-text">[6-3定时器外部时钟</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E7%AE%80%E4%BB%8B"><span class="toc-text">输出比较简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E6%A8%A1%E5%BC%8F"><span class="toc-text">输出比较模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PWM-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-text">PWM 基本结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%88%B5%E6%9C%BA"><span class="toc-text">舵机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA%E5%8F%8A%E5%85%B6%E9%A9%B1%E5%8A%A8"><span class="toc-text">直流电机及其驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF"><span class="toc-text">硬件电路</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3296,7 +3296,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/","name":"6-4TIM输出比较"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"6-4TIM输出比较","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/","wordCount":0,"datePublished":"2023-05-07T14:47:18.644Z","dateModified":"2023-05-12T11:25:27.419Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/","name":"6-4TIM输出比较"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"6-4TIM输出比较","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/","wordCount":0,"datePublished":"2023-05-07T14:47:18.644Z","dateModified":"2023-05-12T13:53:40.360Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

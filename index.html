@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683899202255),
+    lastupdate: new Date(1683899672340),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc","category","tagcloud","text"],
@@ -2393,7 +2393,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [[6-4TIM输出比较]]PWM呼吸灯
+        [6-4TIM输出比较PWM呼吸灯
 RCC开启时钟，把TIM外设和GPIO外设的时钟打开
 配置时基单元，包括前面的时钟源和时基单元
 配置输出比较单元
@@ -2405,7 +2405,7 @@ CCR的值、输出比较模式、极性选择、输出使能（在结构体同�
 
 库函数
 配置4个比较单元 TIM_OCxInit() 
-TIM_ForcedOCxCon...
+TIM_ForcedOCxConfig...
       
     
   </div>
@@ -2532,11 +2532,11 @@ TIM_ForcedOCxCon...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [[23.5.9]]LAB亮度-对比度Lab颜色空间中，L亮度；a的正数代表红色，负端代表绿色；b的正数代表黄色，负端代表兰色。不像RGB和CMYK色彩空间，Lab颜色被设计来接近人类视觉。因此L分量可以调整亮度对，修改a和b分量的输出色阶来做精确的颜色平衡。
+        [[23.5.9]LAB亮度-对比度Lab颜色空间中，L亮度；a的正数代表红色，负端代表绿色；b的正数代表黄色，负端代表兰色。不像RGB和CMYK色彩空间，Lab颜色被设计来接近人类视觉。因此L分量可以调整亮度对，修改a和b分量的输出色阶来做精确的颜色平衡。
 
 注意：在OpenMV的查找色块的算法中，运用的就是这个LAB模式！
 
-光源的选择如果你的机器是在工业上，或者24小时长时间运行的设...
+光源的选择如果你的机器是在工业上，或者24小时长时间运行的设备...
       
     
   </div>
@@ -2599,14 +2599,14 @@ TIM_ForcedOCxCon...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [[6-3定时器外部时钟]]输出比较简介
+        [6-3定时器外部时钟输出比较简介
 OC（Output Compare）输出比较
 IC（Input Capture）输入捕获
 CC（Capture&#x2F;Compare）输入捕获和输出比较的单元
 
 
 输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形
-CCR是捕获和比较共用的...
+CCR是捕获和比较共用的，当使...
       
     
   </div>
@@ -2669,8 +2669,8 @@ CCR是捕获和比较共用的...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [[6-2 定时器定时中断]]
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include &quot;stm32f10x.h&quot;                  // D...
+        6-2 定时器定时中断
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include &quot;stm32f10x.h&quot;                  // Devic...
       
     
   </div>
