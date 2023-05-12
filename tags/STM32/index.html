@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683727317779),
+    lastupdate: new Date(1683899202255),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc","category","tagcloud","text"],
@@ -2353,6 +2353,81 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/12/04-定时器/6-5 PWM驱动LED、舵机、直流电机/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TAN's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="TAN's Blog">
+    <meta itemprop="description" content="this is TAN7 blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/05/12/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-5%20PWM%E9%A9%B1%E5%8A%A8LED%E3%80%81%E8%88%B5%E6%9C%BA%E3%80%81%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA/"  itemprop="url">
+        6-5 PWM驱动LED、舵机、直流电机
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [[6-4TIM输出比较]]PWM呼吸灯
+RCC开启时钟，把TIM外设和GPIO外设的时钟打开
+配置时基单元，包括前面的时钟源和时基单元
+配置输出比较单元
+CCR的值、输出比较模式、极性选择、输出使能（在结构体同一配置）
+
+
+配置GPIO，将PWM对应的GPIO口，初始化为复用推挽输出的配置
+运行控制
+
+库函数
+配置4个比较单元 TIM_OCxInit() 
+TIM_ForcedOCxCon...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-12T21:46:15+08:00">2023-05-12</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/05/12/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-5%20PWM%E9%A9%B1%E5%8A%A8LED%E3%80%81%E8%88%B5%E6%9C%BA%E3%80%81%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TAN's Blog">
@@ -2972,78 +3047,6 @@ OLED显示屏：功耗低，响应速度快，宽视角（因为oled是自发光
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/07/01-GPIO基本用法/03_2 GPIO输入/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="TAN's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="TAN's Blog">
-    <meta itemprop="description" content="this is TAN7 blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/"  itemprop="url">
-        03_2 GPIO输入
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [[03_1 LED输出]]按键介绍
-按键:常见的输入设备，按下导通，松手断开
-按键会存在抖动
-
-
-
-传感器模块介绍
-传感器：光敏电阻&#x2F;热敏电阻&#x2F;红外接收管
-传感器的元件的电阻会随着外界的模拟量的变化而变化，通过与定值电阻分压即可得到模拟电压输出，再通过电压比较器进行二值化即可得到数字电压输出
-注意这其中一个传感器，N1为传感器电阻本身，上面的R1是用来和传感器电阻进行分...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-07T22:47:18+08:00">2023-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/STM32%E5%AD%A6%E4%B9%A0/">STM32学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/STM32%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">STM32学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/07/01-GPIO%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/03_2%20GPIO%E8%BE%93%E5%85%A5/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3169,7 +3172,7 @@ OLED显示屏：功耗低，响应速度快，宽视角（因为oled是自发光
           <li><a class="flat-box"
             title="/categories/STM32%E5%AD%A6%E4%B9%A0/" href="/categories/STM32%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesSTM32E5ADA6E4B9A0"
-            ><div class='name'>STM32学习</div><div class='badge'>(11)</div></a></li>
+            ><div class='name'>STM32学习</div><div class='badge'>(12)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E4%BB%A3%E7%A0%81/" href="/categories/%E4%BB%A3%E7%A0%81/"

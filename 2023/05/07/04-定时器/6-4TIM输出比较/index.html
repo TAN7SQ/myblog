@@ -43,7 +43,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-05-07T14:47:18.644Z">
-<meta property="article:modified_time" content="2023-05-07T13:53:04.833Z">
+<meta property="article:modified_time" content="2023-05-12T11:25:27.419Z">
 <meta property="article:author" content="TAN7">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683727317779),
+    lastupdate: new Date(1683899202255),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc","category","tagcloud","text"],
@@ -2406,15 +2406,70 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>CC（Capture&#x2F;Compare）输入捕获和输出比较的单元</li>
 </ul>
 </li>
-<li>输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230507215009.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230507215009.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><ul>
+<li>输出比较可以通过比较CNT与CCR(捕获&#x2F;比较寄存器) 寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，<strong>用于输出一定频率和占空比的PWM波形</strong><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230507215009.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230507215009.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><ul>
 <li>CCR是捕获和比较共用的，当使用输入捕获时，它就是捕获寄存器，当使用输出比较时，它就是比较寄存器<ul>
 <li>在输出比较中，电路会比较CNT和CCR的值，CNT自增，CCR给一个设定值，当CNT&gt;、&lt;或&#x3D;CCR时，这里输出对应就是置1，置0的一个电平不断跳变的PWM波形了</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>每个高级定时器和通用定时器都哟个有4个输出比较通道</li>
+<li>每个高级定时器和通用定时器都哟个有4个输出比较通道<ul>
 <li>高级定时器的前3个通道额外拥有死区生成和互补输出的功能</li>
+</ul>
+</li>
+<li>通用定时器和高级定时器都有4路输出比较的通道，可以同时输出四路PWM波形<ul>
+<li>4个通道有各自的CCR寄存器，但是它们是公用同一个CNT计数器的</li>
+</ul>
+</li>
+</ul>
+<h1 id="输出比较模式"><a href="#输出比较模式" class="headerlink" title="输出比较模式"></a>输出比较模式</h1><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512164524.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512164524.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ol>
+<li>冻结：保持原状态，也可以理解成无效<ul>
+<li>如果正在输出PWM波，如果想暂停一会儿输出，就可以设置成这个模式</li>
+</ul>
+</li>
+<li>无效电平、电平反转、有效电平：是和关断、刹车这些功能配合表述的<ul>
+<li>电平反转可输出占空比为50%的波形</li>
+</ul>
+</li>
+<li>PWM模式1、2：可以用于输出频率和占空比都可调的PWM波形<ul>
+<li>一般都只使用向上计数</li>
+</ul>
+</li>
+</ol>
+<h2 id="PWM-基本结构"><a href="#PWM-基本结构" class="headerlink" title="PWM 基本结构"></a>PWM 基本结构</h2><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512170214.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512170214.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>    CCR自设，CNT不断自增，同时CCR和CNT不断进行比较</p>
+<ol>
+<li>当CNT&lt;CCR时，置高电平</li>
+<li>当CNT&gt;CCR时，置低电平</li>
+<li>当CNT计数满了之后，计数器清零，此时CNT&lt;CCR了，所以有置为高电平</li>
+</ol>
+<blockquote>
+<p>所以PWM波形受CCR控制<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512170552.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512170552.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</blockquote>
+<h1 id="舵机"><a href="#舵机" class="headerlink" title="舵机"></a>舵机</h1><ul>
+<li><p>舵机是一种根据输入PWM信号占空比，来控制输出角度的装置</p>
+<ul>
+<li>舵机并不是一个单独的电机，内部是由直流电机驱动的，通过PWM输入到控制电路，给控制板一个指定的目标角度，然后电位器检测输出轴的当前角度，如果大于目标角度，电机就反转，小于目标角度，电机就正转，最终使得输出轴固定在指定角度<blockquote>
+<p>输入PWM信号要求：周期为20ms，高电平宽度为0.5ms~2.5ms</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>电机是大功率设备，最好能直接用电机电源驱动，如果单独供电，供电的负极要和STM32共地，然后正极接在5V供电引脚上<img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512171231.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512171231.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</li>
+</ul>
+<h1 id="直流电机及其驱动"><a href="#直流电机及其驱动" class="headerlink" title="直流电机及其驱动"></a>直流电机及其驱动</h1><pre><code>由于直流电机没有自带驱动电路，所以我们需要外挂一个驱动电路来控制 
+</code></pre>
+<ul>
+<li>直流电机属于大功率器件，<strong>GPIO口无法直接驱动，需要配合电机驱动电路来操作</strong></li>
+<li>TB6612是一款<strong>双路H桥型的直流电机驱动芯片</strong>，可以驱动两个直流电机并控制转速和方向</li>
+</ul>
+<h2 id="硬件电路"><a href="#硬件电路" class="headerlink" title="硬件电路"></a>硬件电路</h2><p><img src="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512172125.png" class="lazyload" data-srcset="https://tan-1317522972.cos.ap-guangzhou.myqcloud.com/OB/000_Attachment/20230512172125.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li>VM是驱动电压输入端，范围是4.5-10V，一般和电机额定电压保持一致</li>
+<li>VCC是逻辑电平输入端，范围是2.7-5.5V，这个要和控制器的电压保持一致，比如STM32是3.3V的器件，就接3.3V</li>
+<li>AO1、AO2、BO1、BO2就是两路电机的输出，对应上端的<code>PWMA,AIN2,AIN1</code>这三个引脚控制下面A路的一个电机</li>
+<li>最后还有STBY(Stand By)引脚，这个是待机控制引脚，如果接GND，芯片就不工作，处于待机状态，如果接逻辑电源VCC，芯片就正常工作</li>
 </ul>
 
   </div>
@@ -2440,10 +2495,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-07T21:53:04+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-12T19:25:27+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 7, 2023</p>
+    <p>更新于：May 12, 2023</p>
   </a>
 </div>
 
@@ -2598,7 +2653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <li><a class="flat-box"
             title="/categories/STM32%E5%AD%A6%E4%B9%A0/" href="/categories/STM32%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesSTM32E5ADA6E4B9A0"
-            ><div class='name'>STM32学习</div><div class='badge'>(11)</div></a></li>
+            ><div class='name'>STM32学习</div><div class='badge'>(12)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E4%BB%A3%E7%A0%81/" href="/categories/%E4%BB%A3%E7%A0%81/"
@@ -2679,7 +2734,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F"><span class="toc-text">[[6-3定时器外部时钟]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E7%AE%80%E4%BB%8B"><span class="toc-text">输出比较简介</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3%E5%AE%9A%E6%97%B6%E5%99%A8%E5%A4%96%E9%83%A8%E6%97%B6%E9%92%9F"><span class="toc-text">[[6-3定时器外部时钟]]</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E7%AE%80%E4%BB%8B"><span class="toc-text">输出比较简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E6%A8%A1%E5%BC%8F"><span class="toc-text">输出比较模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PWM-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-text">PWM 基本结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%88%B5%E6%9C%BA"><span class="toc-text">舵机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA%E5%8F%8A%E5%85%B6%E9%A9%B1%E5%8A%A8"><span class="toc-text">直流电机及其驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF"><span class="toc-text">硬件电路</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3241,7 +3296,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/","name":"6-4TIM输出比较"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"6-4TIM输出比较","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/","wordCount":0,"datePublished":"2023-05-07T14:47:18.644Z","dateModified":"2023-05-07T13:53:04.833Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is TAN7 blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TAN's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/STM32学习/","name":"STM32学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/05/07/04-定时器/6-4TIM输出比较/","name":"6-4TIM输出比较"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TAN's Blog","url":"http://example.com/","keywords":null,"description":"this is TAN7 blog","author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is TAN7 blog"},"publisher":{"@type":"Organization","name":"TAN's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"6-4TIM输出比较","description":"this is TAN7 blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/"},"author":{"@type":"Person","name":"TAN7","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TAN's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/05/07/04-%E5%AE%9A%E6%97%B6%E5%99%A8/6-4TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83/","wordCount":0,"datePublished":"2023-05-07T14:47:18.644Z","dateModified":"2023-05-12T11:25:27.419Z","articleSection":"STM32学习","keywords":"STM32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
